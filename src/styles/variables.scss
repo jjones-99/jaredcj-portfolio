@@ -1,0 +1,26 @@
+// ========= Web Fonts =========
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Spartan:wght@400;500;600&display=swap");
+
+// ========= Colors =========
+
+$color-hue: 250;
+
+$color-primary: hsl($color-hue, 69%, 61%);
+$color-primary-light: hsl($color-hue, 57%, 53%);
+$color-primary-dark: hsl($color-hue, 92%, 8%);
+
+$color-title: hsl(0, 0%, 0%);
+$color-subtitle: hsl(0, 0%, 50%);
+$color-text: hsl(0, 0%, 0%);
+$color-text-emphasis: $color-primary;
+$color-muted: hsl(0, 0%, 83%);
+
+// ========= Fonts =========
+
+$font-family-primary: "Spartan", sans-serif;
+$font-family-secondary: "Roboto Slab", serif;
+
+$font-title: 400 $font-family-secondary;
+$font-subtitle: 400 $font-family-primary;
+$font-text: 400 $font-family-primary;
+$font-muted: 400 $font-family-primary;
