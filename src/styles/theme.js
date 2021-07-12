@@ -6,20 +6,24 @@ const FONT_FAMILY_SECONDARY = '"Roboto Slab", serif';
 export const theme = {
   // ========== Colors ==========
 
-  "colorPrimary": COLOR_PRIMARY,
-  "colorPrimaryLight": `hsl(${COLOR_HUE}, 57%, 53%)`,
-  "colorPrimaryDark": `hsl(${COLOR_HUE}, 92%, 8%)`,
+  colorPrimary: COLOR_PRIMARY,
+  colorPrimaryLight: `hsl(${COLOR_HUE}, 57%, 53%)`,
+  colorPrimaryDark: `hsl(${COLOR_HUE}, 92%, 8%)`,
 
-  "colorTitle": "hsl(0, 0%, 0%)",
-  "colorSubtitle": "hsl(0, 0%, 50%)",
-  "colorText": "hsl(0, 0%, 0%)",
-  "colorEmphasis": COLOR_PRIMARY,
-  "colorMuted": "hsl(0, 0%, 83%)",
+  colorTitle: "hsl(0, 0%, 0%)",
+  colorSubtitle: "hsl(0, 0%, 50%)",
+  colorText: "hsl(0, 0%, 0%)",
+  colorEmphasis: COLOR_PRIMARY,
+  colorMuted: "hsl(0, 0%, 83%)",
 
   // ========= Fonts =========
 
-  "fontTitle": `400 ${FONT_FAMILY_SECONDARY}`,
-  "fontSubtitle": `400 ${FONT_FAMILY_PRIMARY}`,
-  "fontText": `400 ${FONT_FAMILY_PRIMARY}`,
-  "fontMuted": `400 ${FONT_FAMILY_PRIMARY}`,
+  fontTitle: `400 1em ${FONT_FAMILY_SECONDARY}`,
+  fontSubtitle: `400 1em ${FONT_FAMILY_PRIMARY}`,
+  fontText: `400 1em ${FONT_FAMILY_PRIMARY}`,
+  fontMuted: `400 1em ${FONT_FAMILY_PRIMARY}`,
+
+  // ========== Sizing ==========
+
+  headerHeight: `3rem`,
 };

@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import { HeroWrapper, LandingSubtitle, LandingTitle } from "./HeroStyles";
 
 const Hero = () => {
   return (
-    <div>
-      Hero
-    </div>
-  )
-}
+    <HeroWrapper>
+      <LandingTitle>Jared Jones</LandingTitle>
+      <LandingSubtitle>Front-end developer</LandingSubtitle>
+    </HeroWrapper>
+  );
+};
 
-export default Hero
+export default Hero;

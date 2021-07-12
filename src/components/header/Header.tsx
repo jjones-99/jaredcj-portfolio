@@ -1,11 +1,10 @@
 import React from "react";
-import { theme } from "../../styles/theme";
 import Navbar from "../navbar/Navbar";
 import { HeaderDiv } from "./HeaderStyles";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
-    <HeaderDiv theme={theme}>
+    <HeaderDiv>
       <span>Jared Jones</span>
       <Navbar />
     </HeaderDiv>
