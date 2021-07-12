@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const HeroWrapper = styled.div`
   height: calc(100vh - ${(props) => props.theme.headerHeight});
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const LandingTitle = styled.h1`
