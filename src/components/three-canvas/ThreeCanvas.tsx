@@ -26,6 +26,7 @@ const ThreeCanvas: React.FC = () => {
 
     // CAMERA
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+    camera.position.z = 5;
 
     // LIGHTING
     const light = new THREE.DirectionalLight(0xff0000, 1);
@@ -61,9 +62,9 @@ const ThreeCanvas: React.FC = () => {
     const animate = () => {
       updateDimensions();
       renderer.render(scene, camera);
-      gsap.to(group.rotation, {
-        x: mouse.y ? mouse.y * 0.0005 : 0,
-        y: mouse.x ? -mouse.x * 0.0005 : 0,
+      gsap.to(group.position, {
+        y: mouse.y ? mouse.y * 0.0005 : 0,
+        x: mouse.x ? -mouse.x * 0.0005 : 0,
         duration: 1,
       });
       requestAnimationFrame(animate);

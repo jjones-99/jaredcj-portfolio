@@ -13,31 +13,31 @@ const PARTICLE_CONFIG: IParticle[] = [
     fileName: "bolt",
     size: 0.3,
     color: 0xf0f000,
-    count: 7,
+    count: 25,
   },
   {
     fileName: "cloud",
     size: 0.5,
     color: 0xffffff,
-    count: 13,
+    count: 35,
   },
   {
     fileName: "heart",
     size: 0.4,
     color: 0xf01313,
-    count: 7,
+    count: 25,
   },
   {
     fileName: "paw",
     size: 0.5,
     color: 0x1313f0,
-    count: 13,
+    count: 30,
   },
   {
     fileName: "star",
     size: 0.4,
     color: 0x13f013,
-    count: 17,
+    count: 35,
   },
 ];
 
@@ -59,8 +59,13 @@ const getParticlePath = (name: string) =>
  */
 const generateParticleGeometry = (count: number): THREE.BufferGeometry => {
   const arr = new Float32Array(count * 3); // Three points per particle.
-  for (let i = 0; i < count * 3; i++) {
-    arr[i] = (Math.random() - 0.5) * 10;
+  for (let i = 0; i < count; i++) {
+    const x = (Math.random() - 0.5) * 30;
+    const y = (Math.random() - 0.5) * 30;
+    const z = (Math.random()) * 10 - 10;
+    arr[3 * i] = x;
+    arr[3 * i + 1] = y;
+    arr[3 * i + 2] = z;
   }
   const geometry = new THREE.BufferGeometry();
   geometry.setAttribute("position", new THREE.BufferAttribute(arr, 3));
@@ -80,7 +85,7 @@ export const generateParticles = (): THREE.Points[] => {
       color: config.color,
       map: TEXTURE_LOADER.load(getParticlePath(config.fileName)),
       transparent: true,
-      // depthTest: false,
+      depthTest: false,
       blending: THREE.AdditiveBlending,
     });
     return new THREE.Points(geometry, material);
