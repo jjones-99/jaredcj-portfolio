@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Canvas } from "./ThreeCanvasStyles";
 import * as THREE from "three";
+import { gsap } from "gsap";
 
 const PIXEL_RATIO = window.devicePixelRatio;
 
@@ -19,6 +20,8 @@ const ThreeCanvas: React.FC = () => {
       alpha: true,
     });
     renderer.setPixelRatio(PIXEL_RATIO);
+    const group = new THREE.Group();
+    scene.add(group);
 
     // CAMERA
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
@@ -33,9 +36,16 @@ const ThreeCanvas: React.FC = () => {
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
     const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+    group.add(cube);
 
     // More helpers
+
+    const mouse: { x?: number; y?: number } = { x: undefined, y: undefined };
+    const updateMouse = (event: PointerEvent) => {
+      mouse.x = event.clientX;
+      mouse.y = event.clientY;
+    };
+    window.addEventListener("pointermove", updateMouse);
 
     const updateDimensions = () => {
       const width = canvas.clientWidth;
@@ -52,9 +62,12 @@ const ThreeCanvas: React.FC = () => {
 
     const animate = () => {
       updateDimensions();
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
       renderer.render(scene, camera);
+      gsap.to(group.rotation, {
+        x: mouse.y ? mouse.y * 0.01 : 0,
+        y: mouse.x ? -mouse.x * 0.01 : 0,
+        duration: 1,
+      });
       requestAnimationFrame(animate);
     };
     requestAnimationFrame(animate);
