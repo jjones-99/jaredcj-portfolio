@@ -39,12 +39,20 @@ const ThreeCanvas: React.FC = () => {
 
     // More helpers
 
+    // Mouse event handler.
     const mouse: { x?: number; y?: number } = { x: undefined, y: undefined };
     const updateMouse = (event: PointerEvent) => {
       mouse.x = event.clientX;
       mouse.y = event.clientY;
     };
     window.addEventListener("pointermove", updateMouse);
+
+    const scroll: { x?: number; y?: number } = { x: undefined, y: undefined };
+    function updateCamera(event: Event) {
+      scroll.x = window.scrollX;
+      scroll.y = window.scrollY;
+    }
+    window.addEventListener("scroll", updateCamera);
 
     const updateDimensions = () => {
       const width = canvas.clientWidth;
@@ -66,6 +74,10 @@ const ThreeCanvas: React.FC = () => {
         y: mouse.y ? mouse.y * 0.0005 : 0,
         x: mouse.x ? -mouse.x * 0.0005 : 0,
         duration: 1,
+      });
+      gsap.to(camera.position, {
+        y: scroll.y ? -scroll.y * 0.05 : 0,
+        // duration: 1,
       });
       requestAnimationFrame(animate);
     };
