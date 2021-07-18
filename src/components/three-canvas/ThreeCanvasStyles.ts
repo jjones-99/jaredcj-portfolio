@@ -7,4 +7,5 @@ export const Canvas = styled.canvas`
   width: 100vw;
   height: 100vh;
   z-index: -100;
+  display: block;
 `;
