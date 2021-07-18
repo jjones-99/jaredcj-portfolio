@@ -64,8 +64,8 @@ const ThreeCanvas: React.FC = () => {
       updateDimensions();
       renderer.render(scene, camera);
       gsap.to(group.rotation, {
-        x: mouse.y ? mouse.y * 0.01 : 0,
-        y: mouse.x ? -mouse.x * 0.01 : 0,
+        x: mouse.y ? mouse.y * 0.005 : 0,
+        y: mouse.x ? -mouse.x * 0.005 : 0,
         duration: 1,
       });
       requestAnimationFrame(animate);
