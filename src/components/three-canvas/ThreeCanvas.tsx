@@ -2,75 +2,9 @@ import React, { useEffect } from "react";
 import { Canvas } from "./ThreeCanvasStyles";
 import * as THREE from "three";
 import { gsap } from "gsap";
+import { generateParticles } from "./Particles";
 
 const PIXEL_RATIO = window.devicePixelRatio;
-const TEXTURE_LOADER = new THREE.TextureLoader();
-
-interface IParticle {
-  fileName: string;
-  size: number;
-  color: string | number | THREE.Color;
-  count: number;
-}
-const PARTICLE_CONFIG: IParticle[] = [
-  {
-    fileName: "bolt",
-    size: 0.3,
-    color: 0xf0f000,
-    count: 7,
-  },
-  {
-    fileName: "cloud",
-    size: 0.5,
-    color: 0xffffff,
-    count: 13,
-  },
-  {
-    fileName: "heart",
-    size: 0.4,
-    color: 0xf01313,
-    count: 7,
-  },
-  {
-    fileName: "paw",
-    size: 0.5,
-    color: 0x1313f0,
-    count: 13,
-  },
-  {
-    fileName: "star",
-    size: 0.4,
-    color: 0x13f013,
-    count: 17,
-  },
-];
-const getParticlePath = (name: string) =>
-  `https://raw.githubusercontent.com/jjones-99/jaredcj-portfolio/34637256ec0e8638d7d4b3be3c6ffc862bfe40c1/assets/particles/${name}.png`;
-
-const generateParticles = (count: number) => {
-  const arr = new Float32Array(count * 3); // Three points per particle.
-  for (let i = 0; i < count * 3; i++) {
-    arr[i] = (Math.random() - 0.5) * 10;
-  }
-  return arr;
-};
-
-const buildParticleMaterials = () => {
-  return PARTICLE_CONFIG.map((config) => {
-    const geometry = new THREE.BufferGeometry();
-    geometry.setAttribute(
-      "position",
-      new THREE.BufferAttribute(generateParticles(config.count), 3)
-    );
-    const material = new THREE.PointsMaterial({
-      size: config.size,
-      color: config.color,
-      map: TEXTURE_LOADER.load(getParticlePath(config.fileName)),
-      transparent: true,
-    });
-    return new THREE.Points(geometry, material);
-  });
-};
 
 const ThreeCanvas: React.FC = () => {
   useEffect(() => {
@@ -100,7 +34,7 @@ const ThreeCanvas: React.FC = () => {
     scene.add(light);
 
     // SHAPES
-    const objects = buildParticleMaterials();
+    const objects = generateParticles();
     group.add(...objects);
 
     // More helpers
