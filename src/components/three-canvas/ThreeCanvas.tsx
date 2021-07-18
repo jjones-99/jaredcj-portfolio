@@ -5,6 +5,14 @@ import { gsap } from "gsap";
 
 const PIXEL_RATIO = window.devicePixelRatio;
 
+const generateParticles = (count: number) => {
+  const arr = new Float32Array(count * 3); // Three points per particle.
+  for (let i = 0; i < count * 3; i++) {
+    arr[i] = (Math.random() - 0.5) * 10;
+  }
+  return arr;
+};
+
 const ThreeCanvas: React.FC = () => {
   useEffect(() => {
     const canvas = document.querySelector<HTMLCanvasElement>(".three-canvas");
@@ -33,9 +41,10 @@ const ThreeCanvas: React.FC = () => {
     scene.add(light);
 
     // SHAPES
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute("position", new THREE.BufferAttribute(generateParticles(100), 3));
+    const material = new THREE.PointsMaterial({ size: 0.05, color: 0x000000 });
+    const cube = new THREE.Points(geometry, material);
     group.add(cube);
 
     // More helpers
