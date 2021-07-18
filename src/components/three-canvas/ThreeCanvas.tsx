@@ -7,43 +7,45 @@ const PIXEL_RATIO = window.devicePixelRatio;
 const TEXTURE_LOADER = new THREE.TextureLoader();
 
 interface IParticle {
-  path: string;
+  fileName: string;
   size: number;
   color: string | number | THREE.Color;
   count: number;
 }
 const PARTICLE_CONFIG: IParticle[] = [
   {
-    path: "../../../assets/particles/bolt.png",
+    fileName: "bolt",
     size: 0.3,
     color: 0xf0f000,
     count: 7,
   },
   {
-    path: "../../../assets/particles/cloud.png",
+    fileName: "cloud",
     size: 0.5,
     color: 0xffffff,
     count: 13,
   },
   {
-    path: "../../../assets/particles/heart.png",
+    fileName: "heart",
     size: 0.4,
     color: 0xf01313,
     count: 7,
   },
   {
-    path: "../../../assets/particles/paw.png",
+    fileName: "paw",
     size: 0.5,
     color: 0x1313f0,
     count: 13,
   },
   {
-    path: "../../../assets/particles/star.png",
+    fileName: "star",
     size: 0.4,
     color: 0x13f013,
     count: 17,
   },
 ];
+const getParticlePath = (name: string) =>
+  `https://raw.githubusercontent.com/jjones-99/jaredcj-portfolio/34637256ec0e8638d7d4b3be3c6ffc862bfe40c1/assets/particles/${name}.png`;
 
 const generateParticles = (count: number) => {
   const arr = new Float32Array(count * 3); // Three points per particle.
@@ -63,7 +65,7 @@ const buildParticleMaterials = () => {
     const material = new THREE.PointsMaterial({
       size: config.size,
       color: config.color,
-      map: TEXTURE_LOADER.load("https://raw.githubusercontent.com/Kuntal-Das/textures/main/sp2.png"),
+      map: TEXTURE_LOADER.load(getParticlePath(config.fileName)),
       transparent: true,
     });
     return new THREE.Points(geometry, material);
