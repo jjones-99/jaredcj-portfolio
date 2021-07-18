@@ -4,6 +4,46 @@ import * as THREE from "three";
 import { gsap } from "gsap";
 
 const PIXEL_RATIO = window.devicePixelRatio;
+const TEXTURE_LOADER = new THREE.TextureLoader();
+
+interface IParticle {
+  path: string;
+  size: number;
+  color: string | number | THREE.Color;
+  count: number;
+}
+const PARTICLE_CONFIG: IParticle[] = [
+  {
+    path: "../../../assets/particles/bolt.png",
+    size: 0.3,
+    color: 0xf0f000,
+    count: 7,
+  },
+  {
+    path: "../../../assets/particles/cloud.png",
+    size: 0.5,
+    color: 0xffffff,
+    count: 13,
+  },
+  {
+    path: "../../../assets/particles/heart.png",
+    size: 0.4,
+    color: 0xf01313,
+    count: 7,
+  },
+  {
+    path: "../../../assets/particles/paw.png",
+    size: 0.5,
+    color: 0x1313f0,
+    count: 13,
+  },
+  {
+    path: "../../../assets/particles/star.png",
+    size: 0.4,
+    color: 0x13f013,
+    count: 17,
+  },
+];
 
 const generateParticles = (count: number) => {
   const arr = new Float32Array(count * 3); // Three points per particle.
@@ -11,6 +51,23 @@ const generateParticles = (count: number) => {
     arr[i] = (Math.random() - 0.5) * 10;
   }
   return arr;
+};
+
+const buildParticleMaterials = () => {
+  return PARTICLE_CONFIG.map((config) => {
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute(
+      "position",
+      new THREE.BufferAttribute(generateParticles(config.count), 3)
+    );
+    const material = new THREE.PointsMaterial({
+      size: config.size,
+      color: config.color,
+      map: TEXTURE_LOADER.load("https://raw.githubusercontent.com/Kuntal-Das/textures/main/sp2.png"),
+      transparent: true,
+    });
+    return new THREE.Points(geometry, material);
+  });
 };
 
 const ThreeCanvas: React.FC = () => {
@@ -41,11 +98,8 @@ const ThreeCanvas: React.FC = () => {
     scene.add(light);
 
     // SHAPES
-    const geometry = new THREE.BufferGeometry();
-    geometry.setAttribute("position", new THREE.BufferAttribute(generateParticles(100), 3));
-    const material = new THREE.PointsMaterial({ size: 0.05, color: 0x000000 });
-    const cube = new THREE.Points(geometry, material);
-    group.add(cube);
+    const objects = buildParticleMaterials();
+    group.add(...objects);
 
     // More helpers
 
