@@ -26,7 +26,6 @@ const ThreeCanvas: React.FC = () => {
 
     // CAMERA
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-    camera.position.z = 5;
 
     // LIGHTING
     const light = new THREE.DirectionalLight(0xff0000, 1);
