@@ -80,6 +80,8 @@ export const generateParticles = (): THREE.Points[] => {
       color: config.color,
       map: TEXTURE_LOADER.load(getParticlePath(config.fileName)),
       transparent: true,
+      // depthTest: false,
+      blending: THREE.AdditiveBlending,
     });
     return new THREE.Points(geometry, material);
   });
