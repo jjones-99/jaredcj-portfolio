@@ -1,10 +1,10 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
-import Hero from "./components/hero/Hero";
-import ThreeCanvas from "./components/three-canvas/ThreeCanvas";
-import Work from "./components/work/Work";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import ThreeCanvas from "./components/ThreeCanvas/ThreeCanvas";
+import Work from "./components/Work/Work";
 import { theme } from "./styles/theme";
 
 function App() {

@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import { HeaderDiv } from "./HeaderStyles";
 
 const Header: React.FC = () => {
