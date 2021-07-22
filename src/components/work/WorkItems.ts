@@ -1,3 +1,5 @@
+import SVThumbnail from "../../assets/work/SVThumbnailpng.png";
+
 export interface WorkItem {
   title: string;
   time: string;
@@ -14,7 +16,7 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     title: "Startup Victoria",
     time: "2019",
-    thumbnailSrc: "",
+    thumbnailSrc: SVThumbnail,
     gallerySrcs: [],
     hook: "A Melbourne not-for-profit community focused on founders.",
     summary: `During my internship working at Startup Victoria, I maintained, moderated, and developed new functionality for their community website, while improving the professional quality of the public site. This involved a great deal of fixing bugs in function and style, so it was a great exercise in triage and the Jobs to be Done theory.<br />I was the only developer in the small team, so I had more responsibility and ownership of the project. There's some of my work on every page. I did front-side work with styles and design as well as back-side work with creating addons to improve the moderation of the content.<br />Because I was doing a lot of work on a lot of different sectors—and using technology I hadn't any experience with—it was a great opportunity to take my own time teaching myself more about the tools I had in order to enhance my work.`,

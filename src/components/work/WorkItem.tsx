@@ -1,5 +1,15 @@
 import React from "react";
 import { WorkItem } from "./WorkItems";
+import {
+  WorkCardBody,
+  WorkCardButton,
+  WorkCardContainer,
+  WorkCardContent,
+  WorkCardCorner,
+  WorkCardHeader,
+  WorkCardMask,
+  WorkCardTitle,
+} from "./WorkStyles";
 
 export interface WorkCardProps {
   // The item to display.
@@ -15,7 +25,19 @@ export interface WorkCardProps {
  */
 const WorkCard: React.FC<WorkCardProps> = (props) => {
   const item = props.workItem;
-  return <div>{item.title}</div>;
+  return (
+    <WorkCardContainer imageSrc={item.thumbnailSrc}>
+      <WorkCardMask />
+      <WorkCardCorner>{item.time}</WorkCardCorner>
+      <WorkCardContent>
+        <WorkCardHeader>
+          <WorkCardTitle>{item.title}</WorkCardTitle>
+        </WorkCardHeader>
+        <WorkCardBody>{item.hook}</WorkCardBody>
+        <WorkCardButton>Read More</WorkCardButton>
+      </WorkCardContent>
+    </WorkCardContainer>
+  );
 };
 
 export default WorkCard;

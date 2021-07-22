@@ -22,6 +22,8 @@ export const theme = {
   fontSubtitle: `400 1em ${FONT_FAMILY_PRIMARY}`,
   fontText: `400 1em ${FONT_FAMILY_PRIMARY}`,
   fontMuted: `400 1em ${FONT_FAMILY_PRIMARY}`,
+  fontButton: `600 1em ${FONT_FAMILY_PRIMARY}`,
+  fontDecor: `800 1em ${FONT_FAMILY_PRIMARY}`,
 
   // ========== Sizing ==========
 
