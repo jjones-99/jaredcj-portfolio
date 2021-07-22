@@ -1,4 +1,4 @@
-interface WorkItem {
+export interface WorkItem {
   title: string;
   time: string;
   thumbnailSrc: string;
@@ -10,7 +10,7 @@ interface WorkItem {
   githubLink?: string;
 }
 
-const workItems: WorkItem[] = [
+export const WORK_ITEMS: WorkItem[] = [
   {
     title: "Startup Victoria",
     time: "2019",
@@ -31,5 +31,3 @@ const workItems: WorkItem[] = [
     tags: ["TypeScript", "HTML", "SCSS", "SharePoint", "React", "Node", "Express"],
   },
 ];
-
-export default workItems;
