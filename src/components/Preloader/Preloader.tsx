@@ -11,11 +11,11 @@ interface PreloaderProps {
  * Represents a preloader component for pages on the site.
  * NOTE: At the moment, this runs off of time, not dynamic loading.
  */
-const Preloader: React.FC<PreloaderProps> = (props) => {
+const Preloader: React.FC<PreloaderProps> = ({ clearPreloader }) => {
   const interval = useRef<number | undefined>(undefined);
 
   useEffect(() => {
-    interval.current = window.setInterval(props.clearPreloader, TIMED_REVEAL_DELAY);
+    interval.current = window.setInterval(clearPreloader, TIMED_REVEAL_DELAY);
 
     return () => window.clearInterval(interval.current);
   }, []);

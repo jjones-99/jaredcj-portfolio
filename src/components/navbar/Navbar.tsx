@@ -8,10 +8,10 @@ interface NavItemProps {
 /**
  * Represents a single item of the site navigation.
  */
-const NavItem: React.FC<NavItemProps> = (props) => {
+const NavItem: React.FC<NavItemProps> = ({ href, children }) => {
   return (
     <NavbarItem>
-      <a href={props.href}>{props.children}</a>
+      <a href={href}>{children}</a>
     </NavbarItem>
   );
 };
