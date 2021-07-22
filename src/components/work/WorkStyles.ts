@@ -22,7 +22,7 @@ export const WorkCardListItem = styled.li`
 
 export const WorkCardContainer = styled.article<{ imageSrc: string }>`
   position: relative;
-  background-image: url(${({ theme }) => theme.imageSrc});
+  background-image: url(${({ imageSrc }) => imageSrc});
   background-size: cover;
   aspect-ratio: 3 / 3;
   box-shadow: 0 1.3rem 5rem 0 rgb(0 0 0 / 35%);
