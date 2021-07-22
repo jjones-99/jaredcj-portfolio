@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
-import { HeaderDiv } from "./HeaderStyles";
+import { HeaderContainer } from "./HeaderStyles";
 
 const Header: React.FC = () => {
   return (
-    <HeaderDiv>
-      <span>Jared Jones</span>
+    <HeaderContainer>
+      <h1>Jared Jones</h1>
       <Navbar />
-    </HeaderDiv>
+    </HeaderContainer>
   );
 };
 
