@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeroSection = styled.section`
+export const HeroContainer = styled.section`
   height: calc(100vh - ${(props) => props.theme.headerHeight});
   display: flex;
   flex-direction: column;

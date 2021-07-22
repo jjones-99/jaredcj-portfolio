@@ -1,12 +1,12 @@
 import React from "react";
-import { HeroSection, LandingSubtitle, LandingTitle } from "./HeroStyles";
+import { HeroContainer, LandingSubtitle, LandingTitle } from "./HeroStyles";
 
 const Hero = () => {
   return (
-    <HeroSection>
+    <HeroContainer>
       <LandingTitle>Jared Jones</LandingTitle>
       <LandingSubtitle>Front-end developer</LandingSubtitle>
-    </HeroSection>
+    </HeroContainer>
   );
 };
 
