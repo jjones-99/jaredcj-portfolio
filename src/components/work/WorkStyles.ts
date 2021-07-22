@@ -36,7 +36,7 @@ export const WorkCardCorner = styled.div`
   left: -0.5rem;
   font: ${(props) => props.theme.fontDecor};
   color: white;
-  font-size: 1.7rem;
+  font-size: 2rem;
   text-shadow: 5px 5px 11px rgb(74 74 74 / 70%);
 
   @media only screen and (min-width: 768px) {
