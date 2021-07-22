@@ -16,6 +16,9 @@ export const theme = {
   colorEmphasis: COLOR_PRIMARY,
   colorMuted: "hsl(0, 0%, 83%)",
 
+  colorBackgroundDark: "hsl(0, 0%, 0%)",
+  colorBackgroundLight: "hsl(0, 0%, 100%)",
+
   // ========= Fonts =========
 
   fontTitle: `400 1em ${FONT_FAMILY_SECONDARY}`,

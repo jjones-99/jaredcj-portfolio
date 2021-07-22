@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const WorkContainer = styled.section``;
+export const WorkContainer = styled.section`
+  background: ${({ theme }) => theme.colorBackgroundLight};
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+`;
 
 export const WorkCardList = styled.ul`
   margin: 0;
@@ -18,7 +22,7 @@ export const WorkCardListItem = styled.li`
 
 export const WorkCardContainer = styled.article<{ imageSrc: string }>`
   position: relative;
-  background-image: url(${(props) => props.imageSrc});
+  background-image: url(${({ theme }) => theme.imageSrc});
   background-size: cover;
   aspect-ratio: 3 / 3;
   box-shadow: 0 1.3rem 5rem 0 rgb(0 0 0 / 35%);
@@ -52,7 +56,7 @@ export const WorkCardCorner = styled.div`
   position: absolute;
   top: -0.3rem;
   left: -0.5rem;
-  font: ${(props) => props.theme.fontDecor};
+  font: ${({ theme }) => theme.fontDecor};
   color: white;
   font-size: 1.5rem;
   text-shadow: 5px 5px 11px rgb(74 74 74 / 70%);
@@ -90,7 +94,7 @@ export const WorkCardContent = styled.div`
 export const WorkCardHeader = styled.header``;
 
 export const WorkCardTitle = styled.h3`
-  font: ${(props) => props.theme.fontTitle};
+  font: ${({ theme }) => theme.fontTitle};
   font-size: 1.5rem;
   float: right;
   text-align: right;
@@ -101,7 +105,7 @@ export const WorkCardTitle = styled.h3`
 `;
 
 export const WorkCardBody = styled.p`
-  font: ${(props) => props.theme.fontSubtitle};
+  font: ${({ theme }) => theme.fontSubtitle};
   font-size: 0.75rem;
   float: right;
   text-align: right;
@@ -112,10 +116,10 @@ export const WorkCardBody = styled.p`
 `;
 
 export const WorkCardButton = styled.button`
-  font: ${(props) => props.theme.fontButton};
+  font: ${({ theme }) => theme.fontButton};
   font-size: 0.75rem;
   padding: 0.8em 1.8em;
-  background: ${(props) => props.theme.colorPrimaryLight};
+  background: ${({ theme }) => theme.colorPrimaryLight};
   border: none;
   text-align: center;
   line-height: normal;
