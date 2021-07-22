@@ -1,7 +1,7 @@
 /**
  * Defines the information an experiment/playground item should have.
  */
-interface PlayItem {
+export interface PlayItem {
   title: string;
   time: string;
   thumbnailSrc: string;
@@ -15,7 +15,7 @@ interface PlayItem {
 /**
  * Data for the Playground section of the portfolio.
  */
-const playItems: PlayItem[] = [
+export const PLAY_ITEMS: PlayItem[] = [
   {
     title: "Shining Text",
     time: "2021",
@@ -35,5 +35,3 @@ const playItems: PlayItem[] = [
     demoLink: "",
   },
 ];
-
-export default playItems;
