@@ -1,3 +1,6 @@
+/**
+ * Defines the information an experiment/playground item should have.
+ */
 interface PlayItem {
   title: string;
   time: string;
@@ -9,6 +12,9 @@ interface PlayItem {
   githubLink?: string;
 }
 
+/**
+ * Data for the Playground section of the portfolio.
+ */
 const playItems: PlayItem[] = [
   {
     title: "Shining Text",

@@ -7,6 +7,13 @@ interface PreloaderProps {
   clearPreloader: () => void;
 }
 
+/**
+ * Represents a preloader component for pages on the site.
+ * NOTE: At the moment, this runs off of time, not dynamic loading.
+ * 
+ * @param props The properties for the preloader.
+ * @returns The component.
+ */
 const Preloader: React.FC<PreloaderProps> = (props) => {
   const interval = useRef<number | undefined>(undefined);
 
