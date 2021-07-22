@@ -1,7 +1,7 @@
 import React from "react";
 import { WorkCardList, WorkCardListItem, WorkContainer } from "./WorkStyles";
 import { WORK_ITEMS } from "./WorkItems";
-import WorkCard from "./WorkItem";
+import WorkCard from "./WorkCard";
 import { ContentContainer } from "../../AppStyles";
 
 /**
@@ -16,7 +16,7 @@ const Work = () => {
         <WorkCardList>
           {WORK_ITEMS.map((item) => (
             <WorkCardListItem key={item.title}>
-              <WorkCard workItem={item} />
+              <WorkCard item={item} />
             </WorkCardListItem>
           ))}
         </WorkCardList>

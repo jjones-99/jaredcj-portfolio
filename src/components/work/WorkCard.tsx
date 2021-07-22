@@ -13,7 +13,7 @@ import {
 
 export interface WorkCardProps {
   // The item to display.
-  workItem: WorkItem;
+  item: WorkItem;
 }
 
 /**
@@ -24,7 +24,7 @@ export interface WorkCardProps {
  * @returns The component.
  */
 const WorkCard: React.FC<WorkCardProps> = (props) => {
-  const item = props.workItem;
+  const item = props.item;
   return (
     <WorkCardContainer imageSrc={item.thumbnailSrc}>
       <WorkCardMask />
