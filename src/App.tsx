@@ -10,7 +10,7 @@ import Work from "./components/Work/Work";
 import { theme } from "./styles/theme";
 
 function App() {
-  const [preloader, setPreloader] = useState(true);
+  const [preloader, setPreloader] = useState(false);
 
   return (
     <>
