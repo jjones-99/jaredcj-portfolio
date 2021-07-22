@@ -1,21 +1,39 @@
 import styled from "styled-components";
 
-export const WorkContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+export const WorkContainer = styled.section``;
+
+export const WorkCardList = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+`;
+
+export const WorkCardListItem = styled.li`
+  margin-bottom: 7rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 export const WorkCardContainer = styled.article<{ imageSrc: string }>`
   position: relative;
   background-image: url(${(props) => props.imageSrc});
   background-size: cover;
-  width: 80%; // TODO: Responsive
-  aspect-ratio: 3 / 2.5;
-  margin-bottom: 7rem;
+  aspect-ratio: 3 / 3;
   box-shadow: 0 1.3rem 5rem 0 rgb(0 0 0 / 35%);
   border-radius: 0.5rem;
+  margin: 0 auto;
+
+  width: 80%;
+  @media only screen and (min-width: 768px) {
+    font-size: 4rem;
+    aspect-ratio: 3 / 2;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    aspect-ratio: 5 / 3;
+  }
 `;
 
 export const WorkCardMask = styled.div`
@@ -36,13 +54,17 @@ export const WorkCardCorner = styled.div`
   left: -0.5rem;
   font: ${(props) => props.theme.fontDecor};
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-shadow: 5px 5px 11px rgb(74 74 74 / 70%);
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 480px) {
     display: block;
-    top: -1rem;
-    left: -2rem;
+    top: -0.2em;
+    left: -0.5em;
+    font-size: 2.5rem;
+  }
+
+  @media only screen and (min-width: 768px) {
     font-size: 4rem;
   }
 `;
