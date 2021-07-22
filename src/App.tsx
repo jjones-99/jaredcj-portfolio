@@ -19,16 +19,14 @@ function App() {
 
       {preloader && <Preloader clearPreloader={() => setPreloader(false)} />}
       {!preloader && (
-        <div>
-          <ThemeProvider theme={theme}>
-            {/* <ThreeCanvas /> */}
-            <Header />
-            <Hero />
-            <Work />
-            <Playground />
-            <Footer />
-          </ThemeProvider>
-        </div>
+        <ThemeProvider theme={theme}>
+          {/* <ThreeCanvas /> */}
+          <Header />
+          <Hero />
+          <Work />
+          <Playground />
+          <Footer />
+        </ThemeProvider>
       )}
     </>
   );
