@@ -49,7 +49,7 @@ const PARTICLE_CONFIG: IParticle[] = [
  * @returns The fully qualified path to the particle texture.
  */
 const getParticlePath = (name: string) =>
-  `https://raw.githubusercontent.com/jjones-99/jaredcj-portfolio/34637256ec0e8638d7d4b3be3c6ffc862bfe40c1/assets/particles/${name}.png`;
+  `https://raw.githubusercontent.com/jjones-99/jaredcj-portfolio/34637256ec0e8638d7d4b3be3c6ffc862bfe40c1/src/assets/particles/${name}.png`;
 
 /**
  * Generate random BufferGeometry with the given number of particles.
