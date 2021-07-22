@@ -7,8 +7,6 @@ interface NavItemProps {
 
 /**
  * Represents a single item of the site navigation.
- * @param props The properties for the component.
- * @returns The component.
  */
 const NavItem: React.FC<NavItemProps> = (props) => {
   return (
@@ -20,7 +18,6 @@ const NavItem: React.FC<NavItemProps> = (props) => {
 
 /**
  * Represents site navigation for the portfolio.
- * @returns The component.
  */
 const Navbar: React.FC = () => {
   return (

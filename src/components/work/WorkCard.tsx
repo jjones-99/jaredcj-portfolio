@@ -19,12 +19,8 @@ export interface WorkCardProps {
 /**
  * Represents the display for a single item of work.
  * Renders as a card.
- *
- * @param props The properties for the component.
- * @returns The component.
  */
-const WorkCard: React.FC<WorkCardProps> = (props) => {
-  const item = props.item;
+const WorkCard: React.FC<WorkCardProps> = ({ item }) => {
   return (
     <WorkCardContainer imageSrc={item.thumbnailSrc}>
       <WorkCardMask />

@@ -5,7 +5,6 @@ import { FooterContainer } from "./FooterStyles";
 
 /**
  * Represents the footer of the portfolio.
- * @returns The component.
  */
 const Footer = () => {
   return <FooterContainer>Footer</FooterContainer>;

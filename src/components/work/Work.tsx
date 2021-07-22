@@ -6,7 +6,6 @@ import { ContentContainer } from "../../AppStyles";
 
 /**
  * Represents the work section of the portfolio.
- * @returns The component.
  */
 const Work = () => {
   return (

@@ -4,7 +4,6 @@ import { HeaderContainer } from "./HeaderStyles";
 
 /**
  * Represents the header of the portfolio.
- * @returns The component.
  */
 const Header: React.FC = () => {
   return (
