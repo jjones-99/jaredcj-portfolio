@@ -7,7 +7,7 @@ export const theme = {
   // ========== Colors ==========
 
   colorPrimary: COLOR_PRIMARY,
-  colorPrimaryLight: `hsl(${COLOR_HUE}, 57%, 53%)`,
+  colorPrimaryLight: `hsl(${COLOR_HUE}, 70%, 70%)`,
   colorPrimaryDark: `hsl(${COLOR_HUE}, 92%, 8%)`,
 
   colorTitle: "hsl(0, 0%, 0%)",
