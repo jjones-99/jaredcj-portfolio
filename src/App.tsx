@@ -4,6 +4,7 @@ import Cursor from "./components/Cursor/Cursor";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
+import Playground from "./components/Playground/Playground";
 import Preloader from "./components/Preloader/Preloader";
 import ThreeCanvas from "./components/ThreeCanvas/ThreeCanvas";
 import Work from "./components/Work/Work";
@@ -24,6 +25,7 @@ function App() {
             <Header />
             <Hero />
             <Work />
+            <Playground />
             <Footer />
           </ThemeProvider>
         </div>
