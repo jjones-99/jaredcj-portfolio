@@ -26,7 +26,7 @@ export const WorkCardContainer = styled.article<{ imageSrc: string }>`
   margin: 0 auto;
 
   width: 80%;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 480px) {
     font-size: 4rem;
     aspect-ratio: 3 / 2;
   }
