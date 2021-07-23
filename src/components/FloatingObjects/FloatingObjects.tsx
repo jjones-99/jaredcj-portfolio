@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { BarL, BarM, BarS, ObjectFullSizeWrapper, ObjectWrapper } from "./FloatingObjectsStyles";
+import { Bar, ObjectFullSizeWrapper, ObjectWrapper } from "./FloatingObjectsStyles";
 import gsap from "gsap";
 
 interface Position {
@@ -13,6 +13,7 @@ const FloatingObjects = () => {
     y: undefined,
   });
   const wrapperElement = useRef(null);
+  const animateElements: gsap.TweenTarget[] = [];
 
   // On mount, set up listeners.
   useEffect(() => {
@@ -27,15 +28,15 @@ const FloatingObjects = () => {
   // When the mouse position changes, animate our shapes.
   useEffect(() => {
     if (!wrapperElement.current) return;
-    gsap.to(wrapperElement.current, { x: mouse.x, y: mouse.y, stagger: -0.1 });
+    gsap.to(animateElements, { x: mouse.x, stagger: -0.05 });
   }, [mouse]);
 
   return (
     <ObjectFullSizeWrapper>
       <ObjectWrapper ref={wrapperElement}>
-        <BarL />
-        <BarM />
-        <BarS />
+        <Bar width={'18rem'} color={"GoldenRod"} ref={(el) => (animateElements[0] = el)} />
+        <Bar width={'14rem'} color={"DodgerBlue"} ref={(el) => (animateElements[1] = el)} />
+        <Bar width={'8rem'} color={"DarkRed"} ref={(el) => (animateElements[2] = el)} />
       </ObjectWrapper>
     </ObjectFullSizeWrapper>
   );

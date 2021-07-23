@@ -13,29 +13,20 @@ export const ObjectFullSizeWrapper = styled.div`
 
 export const ObjectWrapper = styled.div`
   position: relative;
-  height: 100%;
+  height: 200vh;
 `;
 
-export const BarS = styled.div`
-  position: absolute;
+interface BarProps {
+  width: string;
+  color: string;
+}
+export const Bar = styled.div<BarProps>`
+  position: fixed;
+  top: 0;
+  bottom: 0;
   will-change: transform;
-  height: 100%;
-  width: 3rem;
-  background-color: DarkRed;
-`;
 
-export const BarM = styled.div`
-  position: absolute;
-  will-change: transform;
-  height: 100%;
-  width: 6rem;
-  background-color: DodgerBlue;
-`;
-
-export const BarL = styled.div`
-  position: absolute;
-  will-change: transform;
-  height: 100%;
-  width: 8rem;
-  background-color: GoldenRod;
+  width: ${({ width }) => width};
+  margin: 0 0 0 calc(${({width}) => width} / -2);
+  background-color: ${({ color }) => color};
 `;
