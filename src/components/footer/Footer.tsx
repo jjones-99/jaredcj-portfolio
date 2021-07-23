@@ -25,17 +25,17 @@ const Footer = () => {
       </FooterTopContainer>
       <FooterSocials>
         <FooterSocial>
-          <FooterSocialLink href={URL_LINKEDIN} target="_blank">
+          <FooterSocialLink href={URL_LINKEDIN} target="_blank" rel="noreferrer">
             LinkedIn
           </FooterSocialLink>
         </FooterSocial>
         <FooterSocial>
-          <FooterSocialLink href={URL_GITHUB} target="_blank">
+          <FooterSocialLink href={URL_GITHUB} target="_blank" rel="noreferrer">
             GitHub
           </FooterSocialLink>
         </FooterSocial>
         <FooterSocial>
-          <FooterSocialLink href={URL_CODEPEN} target="_blank">
+          <FooterSocialLink href={URL_CODEPEN} target="_blank" rel="noreferrer">
             CodePen
           </FooterSocialLink>
         </FooterSocial>
@@ -44,7 +44,11 @@ const Footer = () => {
       <FooterCredits>
         <FooterCredit>
           Icons by Mario from{" "}
-          <a href="https://mariodelvalle.github.io/CaptainIconWeb/" target="_blank">
+          <a
+            href="https://mariodelvalle.github.io/CaptainIconWeb/"
+            target="_blank"
+            rel="noreferrer"
+          >
             Captain Icon
           </a>
         </FooterCredit>
