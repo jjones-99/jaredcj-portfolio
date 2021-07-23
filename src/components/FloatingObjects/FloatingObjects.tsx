@@ -14,6 +14,7 @@ const FloatingObjects = () => {
   });
   const wrapperElement = useRef(null);
 
+  // On mount, set up listeners.
   useEffect(() => {
     document.addEventListener("pointermove", (event) => {
       setMouse({
@@ -23,6 +24,7 @@ const FloatingObjects = () => {
     });
   }, []);
 
+  // When the mouse position changes, animate our shapes.
   useEffect(() => {
     if (!wrapperElement.current) return;
     gsap.to(wrapperElement.current, { x: mouse.x, y: mouse.y, stagger: -0.1 });
