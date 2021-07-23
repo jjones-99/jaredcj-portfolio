@@ -13,7 +13,7 @@ const Playground = () => {
       {/* TODO: Section Header */}
       <PlaygroundGrid>
         {PLAY_ITEMS.map((item) => (
-          <PlayCard item={item} />
+          <PlayCard item={item} key={item.title} />
         ))}
       </PlaygroundGrid>
     </PlaygroundContainer>
