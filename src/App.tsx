@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import Cursor from "./components/Cursor/Cursor";
+import FloatingObjects from "./components/FloatingObjects/FloatingObjects";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
@@ -20,6 +21,7 @@ function App() {
       {preloader && <Preloader clearPreloader={() => setPreloader(false)} />}
       {!preloader && (
         <ThemeProvider theme={theme}>
+          <FloatingObjects />
           {/* <ThreeCanvas /> */}
           <Header />
           <Hero />
