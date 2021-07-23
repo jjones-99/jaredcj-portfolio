@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const WorkContainer = styled.section`
-  background: ${({ theme }) => theme.colorBackgroundLight};
   padding-top: 8rem;
   padding-bottom: 8rem;
 `;

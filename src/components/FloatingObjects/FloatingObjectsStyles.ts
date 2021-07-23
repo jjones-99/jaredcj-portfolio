@@ -8,7 +8,7 @@ export const ObjectFullSizeWrapper = styled.div`
   right: 0;
   overflow: hidden;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 `;
 
 export const ObjectWrapper = styled.div`
@@ -25,6 +25,7 @@ export const Bar = styled.div<BarProps>`
   top: 0;
   bottom: 0;
   will-change: transform;
+  z-index: -1;
 
   width: ${({ width }) => width};
   margin: 0 0 0 calc(${({width}) => width} / -2);
