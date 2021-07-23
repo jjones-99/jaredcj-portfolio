@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
-import { HeaderContainer } from "./HeaderStyles";
+import { HeaderContainer, HeaderHome } from "./HeaderStyles";
 
 /**
  * Represents the header of the portfolio.
@@ -8,7 +8,7 @@ import { HeaderContainer } from "./HeaderStyles";
 const Header: React.FC = () => {
   return (
     <HeaderContainer>
-      <h1>Jared Jones</h1>
+      <HeaderHome>Jared Jones</HeaderHome>
       <Navbar />
     </HeaderContainer>
   );

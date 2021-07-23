@@ -25,7 +25,7 @@ export const WorkCardContainer = styled.article<{ imageSrc: string }>`
   background-image: url(${({ imageSrc }) => imageSrc});
   background-size: cover;
   aspect-ratio: 3 / 3;
-  box-shadow: 0 1.3rem 5rem 0 rgb(0 0 0 / 35%);
+  box-shadow: ${({ theme }) => theme.boxShadow};
   border-radius: 0.5rem;
   margin: 0 auto;
 
@@ -59,7 +59,7 @@ export const WorkCardCorner = styled.div`
   font: ${({ theme }) => theme.fontDecor};
   color: white;
   font-size: 1.5rem;
-  text-shadow: 5px 5px 11px rgb(74 74 74 / 70%);
+  text-shadow: ${({ theme }) => theme.textShadow};
 
   @media only screen and (min-width: 480px) {
     display: block;
