@@ -7,6 +7,8 @@ import { HeroContainer, LandingSubtitle, LandingTitle } from "./HeroStyles";
 const Hero = () => {
   return (
     <HeroContainer>
+      {/* TODO: Somehow mask this so that the floating objects 
+      show up where the text is only? */}
       <LandingTitle>
         Hi there,
         <br />

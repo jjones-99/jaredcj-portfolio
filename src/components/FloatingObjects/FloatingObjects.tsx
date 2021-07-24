@@ -7,12 +7,11 @@ interface Position {
   y?: number;
 }
 
-const FloatingObjects = () => {
+const FloatingObjects: React.FC = ({ children }) => {
   const [mouse, setMouse] = useState<Position>({
     x: undefined,
     y: undefined,
   });
-  const wrapperElement = useRef(null);
   const animateElements: gsap.TweenTarget[] = [];
 
   // On mount, set up listeners.
@@ -27,17 +26,21 @@ const FloatingObjects = () => {
 
   // When the mouse position changes, animate our shapes.
   useEffect(() => {
-    if (!wrapperElement.current) return;
-    gsap.to(animateElements, { x: mouse.x, stagger: -0.05 });
+    if (!animateElements) return;
+    gsap.to(animateElements, { x: mouse.x, y: mouse.y, stagger: -0.05 });
   }, [mouse]);
+
+  // Add the ref prop to all of the children, which we use to animate them.
+  const childrenWithRefProp = React.Children.map(children, (child) => {
+    if (!React.isValidElement(child)) return child;
+    return React.cloneElement(child, {
+      ref: (el: HTMLElement | null) => void animateElements.push(el),
+    });
+  });
 
   return (
     <ObjectFullSizeWrapper>
-      <ObjectWrapper ref={wrapperElement}>
-        <Bar width={'18rem'} color={"GoldenRod"} ref={(el) => (animateElements[0] = el)} />
-        <Bar width={'14rem'} color={"DodgerBlue"} ref={(el) => (animateElements[1] = el)} />
-        <Bar width={'8rem'} color={"DarkRed"} ref={(el) => (animateElements[2] = el)} />
-      </ObjectWrapper>
+      <ObjectWrapper>{childrenWithRefProp}</ObjectWrapper>
     </ObjectFullSizeWrapper>
   );
 };
