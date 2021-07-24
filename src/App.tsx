@@ -9,7 +9,7 @@ import Hero from "./components/Hero/Hero";
 import Playground from "./components/Playground/Playground";
 import Preloader from "./components/Preloader/Preloader";
 import Work from "./components/Work/Work";
-import { theme } from "./styles/theme";
+import { BARS, theme } from "./styles/theme";
 
 function App() {
   const [preloader, setPreloader] = useState(false);
@@ -22,9 +22,9 @@ function App() {
       {!preloader && (
         <ThemeProvider theme={theme}>
           <FloatingObjects>
-            <Bar width={"18rem"} color={"GoldenRod"} />
-            <Bar width={"14rem"} color={"DodgerBlue"} />
-            <Bar width={"8rem"} color={"DarkRed"} />
+            {BARS.map(({ color, size }, index) => (
+              <Bar width={size} color={color} key={index} />
+            ))}
           </FloatingObjects>
           {/* <ThreeCanvas /> */}
           <Header />
