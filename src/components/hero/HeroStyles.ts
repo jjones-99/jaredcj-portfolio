@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.section`
+  position: relative;
   height: 100vh;
-  background-color: ${({ theme }) => theme.colorBackgroundDark};
+  /* background-color: ${({ theme }) => theme.colorBackgroundDark}; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,9 +12,10 @@ export const HeroContainer = styled.section`
 export const LandingTitle = styled.h1`
   font: ${({ theme }) => theme.fontDecor};
   font-size: 10rem;
-  color: white;
+  color: black;
   margin-left: 10%;
   text-shadow: ${({ theme }) => theme.textShadow};
+  mix-blend-mode: screen;
 `;
 
 export const LandingSubtitle = styled.p`
