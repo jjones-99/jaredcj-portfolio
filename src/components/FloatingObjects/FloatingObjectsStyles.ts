@@ -22,13 +22,23 @@ interface BarProps {
 }
 export const Bar = styled.div<BarProps>`
   position: fixed;
+  left: 30%;
   will-change: transform;
   z-index: -1;
 
   height: 200vh; // Always full height wherever the mouse is.
-  width: ${({ width }) => width};
-  margin: -100vh 0 0 calc(${({ width }) => width} / -2);
+  width: calc(${({ width }) => width} / 2);
+  margin: -100vh 0 0 calc(${({ width }) => width} / -4);
   background-color: ${({ color }) => color};
+
+  @media only screen and (min-width: 768px) {
+    width: ${({ width }) => width};
+    margin: -100vh 0 0 calc(${({ width }) => width} / -2);
+  }
+
+  @media only screen and (hover) {
+    left: 0;
+  }
 `;
 
 interface CircleProps {

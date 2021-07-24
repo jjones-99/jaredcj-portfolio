@@ -11,11 +11,18 @@ export const HeroContainer = styled.section`
 
 export const LandingTitle = styled.h1`
   font: ${({ theme }) => theme.fontDecor};
-  font-size: 10rem;
+  font-size: 5rem;
   color: black;
   margin-left: 10%;
   text-shadow: ${({ theme }) => theme.textShadow};
-  mix-blend-mode: screen;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 7rem;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    font-size: 10rem;
+  }
 `;
 
 export const LandingSubtitle = styled.p`

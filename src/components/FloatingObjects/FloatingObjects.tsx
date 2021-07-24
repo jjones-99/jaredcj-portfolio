@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Bar, ObjectFullSizeWrapper, ObjectWrapper } from "./FloatingObjectsStyles";
 import gsap from "gsap";
-const animationMediaQuery = window.matchMedia("(hover: hover)");
+const animationMediaQuery = window.matchMedia("(hover)");
 
 interface Position {
   x?: number;
