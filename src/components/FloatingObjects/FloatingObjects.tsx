@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Bar, ObjectFullSizeWrapper, ObjectWrapper } from "./FloatingObjectsStyles";
 import gsap from "gsap";
+const animationMediaQuery = window.matchMedia("(hover: hover)");
 
 interface Position {
   x?: number;
@@ -13,6 +14,7 @@ const FloatingObjects: React.FC = ({ children }) => {
     y: undefined,
   });
   const animateElements: gsap.TweenTarget[] = [];
+  const [enableAnimation, setEnableAnimation] = useState(true);
 
   // On mount, set up listeners.
   useEffect(() => {
@@ -22,11 +24,16 @@ const FloatingObjects: React.FC = ({ children }) => {
         y: event.clientY,
       });
     });
+
+    setEnableAnimation(animationMediaQuery.matches);
+    animationMediaQuery.addEventListener("change", () => {
+      setEnableAnimation(animationMediaQuery.matches);
+    });
   }, []);
 
   // When the mouse position changes, animate our shapes.
   useEffect(() => {
-    if (!animateElements) return;
+    if (!animateElements || !enableAnimation) return;
     gsap.to(animateElements, { x: mouse.x, y: mouse.y, stagger: -0.05 });
   }, [mouse]);
 
