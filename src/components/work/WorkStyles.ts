@@ -150,6 +150,19 @@ export const WorkDetailsCard = styled.article`
   @media only screen and (min-width: 768px) {
     margin: 20vh 15vw;
   }
+
+  &::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5em;
+  }
 `;
 
 export const WorkDetailsHeader = styled.header`
