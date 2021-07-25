@@ -140,12 +140,16 @@ export const WorkDetailsCard = styled.article`
 
   background-color: ${({ theme }) => theme.colorCardBackground};
   border-radius: 0.5rem;
-  margin: 20% 10%;
+  margin: 20vh 10vw;
   padding: 1rem 2rem;
 
   overflow-y: scroll;
 
   color: white;
+
+  @media only screen and (min-width: 768px) {
+    margin: 20vh 15vw;
+  }
 `;
 
 export const WorkDetailsHeader = styled.header`
