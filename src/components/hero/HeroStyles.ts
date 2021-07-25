@@ -11,6 +11,7 @@ export const HeroContainer = styled.section`
 
 export const LandingTitle = styled.h1`
   font: ${({ theme }) => theme.fontDecor};
+  font-weight: 600;
   font-size: 5rem;
   color: black;
   margin-left: 10%;
