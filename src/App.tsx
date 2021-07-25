@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
+import { ScreenOverlay } from "./AppStyles";
 import Cursor from "./components/Cursor/Cursor";
 import FloatingObjects from "./components/FloatingObjects/FloatingObjects";
 import { Bar } from "./components/FloatingObjects/FloatingObjectsStyles";
@@ -21,6 +22,7 @@ function App() {
       {preloader && <Preloader clearPreloader={() => setPreloader(false)} />}
       {!preloader && (
         <ThemeProvider theme={theme}>
+          <ScreenOverlay id="mainOverlay" />
           <FloatingObjects>
             {BARS.map(({ color, size }, index) => (
               <Bar width={size} color={color} key={index} />

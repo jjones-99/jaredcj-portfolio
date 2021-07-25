@@ -11,6 +11,7 @@ import {
 import cancel from "../../assets/cancel.svg";
 import hamburger from "../../assets/hamburger.svg";
 import { URL_LINKEDIN, URL_GITHUB, URL_CODEPEN } from "../../utils/constants";
+import { toggleBodyScrolling } from "../../utils/helpers";
 
 /**
  * Represents site navigation for the portfolio.
@@ -19,13 +20,7 @@ const ThinNavbar: React.FC = () => {
   const [renderMenu, setRenderMenu] = useState(false);
 
   useEffect(() => {
-    const element = document.querySelector("html");
-    if (!element) return;
-    if (renderMenu) {
-      element.classList.add("disabled-scrolling");
-    } else {
-      element.classList.remove("disabled-scrolling");
-    }
+    toggleBodyScrolling(!renderMenu);
   }, [renderMenu]);
 
   return (

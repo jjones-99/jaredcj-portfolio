@@ -19,12 +19,12 @@ export const WorkCardListItem = styled.li`
   }
 `;
 
-export const WorkCardContainer = styled.article<{ imageSrc: string; autoHeight: boolean }>`
+export const WorkCardContainer = styled.article<{ imageSrc: string }>`
   position: relative;
   background-color: ${({ theme }) => theme.colorCardBackground};
   background-image: url(${({ imageSrc }) => imageSrc});
   background-size: cover;
-  aspect-ratio: ${({ autoHeight }) => (autoHeight ? "" : "3 / 3")};
+  aspect-ratio: 3 / 3;
   box-shadow: ${({ theme }) => theme.boxShadow};
   border-radius: 0.5rem;
   margin: 0 auto;
@@ -130,12 +130,26 @@ export const WorkCardButton = styled.button`
   }
 `;
 
-export const WorkCardBackHeader = styled.header`
+export const WorkDetailsCard = styled.article`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: ${({ theme }) => theme.colorCardBackground};
+  border-radius: 0.5rem;
+  margin: 20% 10%;
+
+  overflow-y: scroll;
+`;
+
+export const WorkDetailsHeader = styled.header`
   width: 100%;
   align-items: top;
 `;
 
-export const WorkCardBackTitle = styled.h3`
+export const WorkDetailsTitle = styled.h3`
   font: ${({ theme }) => theme.fontTitle};
   font-size: 1.5rem;
   float: left;
@@ -145,7 +159,7 @@ export const WorkCardBackTitle = styled.h3`
   }
 `;
 
-export const WorkCardBackClose = styled.button`
+export const WorkDetailsClose = styled.button`
   background: none;
   border: none;
   color: white;
@@ -154,7 +168,7 @@ export const WorkCardBackClose = styled.button`
   margin-top: -0.25rem;
 `;
 
-export const WorkCardBackBody = styled.p`
+export const WorkDetailsBody = styled.p`
   font: ${({ theme }) => theme.fontSubtitle};
   font-size: 0.75rem;
   white-space: pre-wrap;

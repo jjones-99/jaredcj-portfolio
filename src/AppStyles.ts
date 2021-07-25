@@ -21,6 +21,20 @@ export const ContentContainer = styled.div`
   }
 `;
 
+export const ScreenOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 500ms ease-in-out;
+`;
+
 export const SectionHeader = styled.header`
   place-items: center;
   text-align: center;

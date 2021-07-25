@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { toggleBodyScrolling } from "../../utils/helpers";
 import { WorkItem } from "./WorkItems";
 import {
-  WorkCardBackBody,
-  WorkCardBackClose,
-  WorkCardBackHeader,
-  WorkCardBackTitle,
+  WorkDetailsBody,
+  WorkDetailsClose,
+  WorkDetailsHeader,
+  WorkDetailsTitle,
   WorkCardBody,
   WorkCardButton,
   WorkCardContainer,
@@ -12,6 +13,7 @@ import {
   WorkCardCorner,
   WorkCardHeader,
   WorkCardTitle,
+  WorkDetailsCard,
 } from "./WorkStyles";
 
 export interface WorkCardProps {
@@ -24,36 +26,38 @@ export interface WorkCardProps {
  * Renders as a card.
  */
 const WorkCard: React.FC<WorkCardProps> = ({ item }) => {
-  const [showFront, setShowFront] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    toggleBodyScrolling(!showModal);
+  }, [showModal]);
+
+  const moreDetails = (
+    <WorkDetailsCard className="">
+      <WorkDetailsHeader>
+        <WorkDetailsTitle>{item.title}</WorkDetailsTitle>
+        <WorkDetailsClose onClick={() => setShowModal(false)}>
+          <i className="fa fa-close"></i>
+        </WorkDetailsClose>
+      </WorkDetailsHeader>
+      <WorkDetailsBody>{item.summary}</WorkDetailsBody>
+    </WorkDetailsCard>
+  );
 
   return (
-    <WorkCardContainer imageSrc={showFront ? item.thumbnailSrc : ""} autoHeight={!showFront}>
-      {showFront && (
-        <>
-          <WorkCardCorner>{item.time}</WorkCardCorner>
-          <WorkCardContent alignX="flex-end" alignY="flex-end">
-            <WorkCardHeader>
-              <WorkCardTitle>{item.title}</WorkCardTitle>
-            </WorkCardHeader>
-            <WorkCardBody>{item.hook}</WorkCardBody>
-            <WorkCardButton onClick={() => setShowFront(false)}>Read More</WorkCardButton>
-          </WorkCardContent>
-        </>
-      )}
-      {!showFront && (
-        <>
-          <WorkCardContent alignX="flex-start" alignY="flex-start">
-            <WorkCardBackHeader>
-              <WorkCardBackTitle>{item.title}</WorkCardBackTitle>
-              <WorkCardBackClose onClick={() => setShowFront(true)}>
-                <i className="fa fa-close"></i>
-              </WorkCardBackClose>
-            </WorkCardBackHeader>
-            <WorkCardBackBody>{item.summary}</WorkCardBackBody>
-          </WorkCardContent>
-        </>
-      )}
-    </WorkCardContainer>
+    <>
+      <WorkCardContainer imageSrc={item.thumbnailSrc}>
+        <WorkCardCorner>{item.time}</WorkCardCorner>
+        <WorkCardContent alignX="flex-end" alignY="flex-end">
+          <WorkCardHeader>
+            <WorkCardTitle>{item.title}</WorkCardTitle>
+          </WorkCardHeader>
+          <WorkCardBody>{item.hook}</WorkCardBody>
+          <WorkCardButton onClick={() => setShowModal(true)}>Read More</WorkCardButton>
+        </WorkCardContent>
+      </WorkCardContainer>
+      {showModal && moreDetails}
+    </>
   );
 };
 
