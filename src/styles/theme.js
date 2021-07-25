@@ -29,6 +29,7 @@ export const theme = {
   colorBackgroundLight: "hsl(0, 0%, 87%)",
 
   colorMenuBackground: `hsl(${COLOR_HUE}, 54%, 71%)`,
+  colorCardBackground: `hsl(${COLOR_HUE}, 34%, 50%)`,
 
   // ========= Fonts =========
 

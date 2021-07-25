@@ -19,11 +19,12 @@ export const WorkCardListItem = styled.li`
   }
 `;
 
-export const WorkCardContainer = styled.article<{ imageSrc: string }>`
+export const WorkCardContainer = styled.article<{ imageSrc: string; autoHeight: boolean }>`
   position: relative;
+  background-color: ${({ theme }) => theme.colorCardBackground};
   background-image: url(${({ imageSrc }) => imageSrc});
   background-size: cover;
-  aspect-ratio: 3 / 3;
+  aspect-ratio: ${({ autoHeight }) => (autoHeight ? "" : "3 / 3")};
   box-shadow: ${({ theme }) => theme.boxShadow};
   border-radius: 0.5rem;
   margin: 0 auto;
@@ -37,17 +38,17 @@ export const WorkCardContainer = styled.article<{ imageSrc: string }>`
   @media only screen and (min-width: 1024px) {
     aspect-ratio: 5 / 3;
   }
-`;
 
-export const WorkCardMask = styled.div`
-  content: "";
-  background: rgb(0 0 0 / 60%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 0.5rem;
+  &::before {
+    content: "";
+    background: rgb(0 0 0 / 60%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
 `;
 
 export const WorkCardCorner = styled.div`
@@ -72,14 +73,14 @@ export const WorkCardCorner = styled.div`
   }
 `;
 
-export const WorkCardContent = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
+export const WorkCardContent = styled.div<{ alignX: string; alignY: string }>`
+  position: relative;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: ${({ alignX }) => alignX};
+  justify-content: ${({ alignY }) => alignY};
   padding: 2rem 1rem;
 
   // Text
@@ -123,6 +124,39 @@ export const WorkCardButton = styled.button`
   text-align: center;
   line-height: normal;
   color: white;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 1rem;
+  }
+`;
+
+export const WorkCardBackHeader = styled.header`
+  width: 100%;
+  align-items: top;
+`;
+
+export const WorkCardBackTitle = styled.h3`
+  font: ${({ theme }) => theme.fontTitle};
+  font-size: 1.5rem;
+  float: left;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 2rem;
+  }
+`;
+
+export const WorkCardBackClose = styled.button`
+  background: none;
+  border: none;
+  color: white;
+  float: right;
+  font-size: 1.5rem;
+  margin-top: -0.25rem;
+`;
+
+export const WorkCardBackBody = styled.p`
+  font: ${({ theme }) => theme.fontSubtitle};
+  font-size: 0.75rem;
 
   @media only screen and (min-width: 768px) {
     font-size: 1rem;
