@@ -3,7 +3,7 @@ import ThinNavbar from "../Navbar/ThinNavbar";
 import WideNavbar from "../Navbar/WideNavbar";
 import { HeaderContainer, HeaderHome } from "./HeaderStyles";
 
-const navbarMediaQuery = window.matchMedia("(min-width: 400px)");
+const navbarMediaQuery = window.matchMedia("(min-width: 480px)");
 
 /**
  * Represents the header of the portfolio.

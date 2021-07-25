@@ -19,14 +19,14 @@ export const ThinNavbarHeader = styled.div`
   display: flex;
   justify-content: flex-end;
   padding: 0.75rem;
-  height: 10%;
+  height: 8%;
 `;
 
 export const ThinNavbarNav = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 90%;
+  height: 92%;
   padding: 30% 30px 60% 30px;
 `;
 
