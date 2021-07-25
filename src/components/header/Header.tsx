@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
+import WideNavbar from "../Navbar/WideNavbar";
 import { HeaderContainer, HeaderHome } from "./HeaderStyles";
 
 /**
@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   return (
     <HeaderContainer>
       <HeaderHome href="/">Jared Jones</HeaderHome>
-      <Navbar />
+      <WideNavbar />
     </HeaderContainer>
   );
 };

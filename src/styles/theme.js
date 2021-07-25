@@ -1,5 +1,5 @@
 // Reused constants.
-const COLOR_HUE = "250";
+const COLOR_HUE = "4";
 const COLOR_PRIMARY = `hsl(${COLOR_HUE}, 69%, 61%)`;
 const FONT_FAMILY_PRIMARY = '"Spartan", sans-serif';
 const FONT_FAMILY_SECONDARY = '"Roboto Slab", serif';

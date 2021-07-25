@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
-export const NavbarNav = styled.nav`
+export const WideNavbarNav = styled.nav`
 `;
 
-export const NavbarItem = styled.a`
+export const WideNavbarItem = styled.a`
   padding-right: 0.5rem;
   font: ${({ theme }) => theme.fontText};
   color: black;
