@@ -21,6 +21,24 @@ export const ContentContainer = styled.div`
   }
 `;
 
+export const SectionHeader = styled.header`
+  place-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+`;
+
+export const SectionTitle = styled.h2`
+  font: ${({ theme }) => theme.fontTitle};
+  font-weight: 600;
+  font-size: 1.5rem;
+`;
+
+export const SectionSubtitle = styled.h6`
+  font: ${({ theme }) => theme.fontSubtitle};
+  font-size: 0.75rem;
+  text-transform: uppercase;
+`;
+
 // Merely for copying common breakpoints.
 const Breakpoints = styled.div`
   @media only screen and (min-width: 480px) {

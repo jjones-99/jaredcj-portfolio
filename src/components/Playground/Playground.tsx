@@ -2,6 +2,7 @@ import React from "react";
 import { PlaygroundContainer, PlaygroundGrid } from "./PlaygroundStyles";
 import PlayCard from "./PlayCard";
 import { PLAY_ITEMS } from "./PlayItems";
+import { SectionHeader, SectionSubtitle, SectionTitle } from "../../AppStyles";
 
 /**
  * Represents the playground section of the portfolio.
@@ -10,7 +11,10 @@ import { PLAY_ITEMS } from "./PlayItems";
 const Playground = () => {
   return (
     <PlaygroundContainer id="playground">
-      {/* TODO: Section Header */}
+        <SectionHeader>
+          <SectionSubtitle>Playground</SectionSubtitle>
+          <SectionTitle>Recent Experiments</SectionTitle>
+        </SectionHeader>
       <PlaygroundGrid>
         {PLAY_ITEMS.map((item) => (
           <PlayCard item={item} key={item.title} />
