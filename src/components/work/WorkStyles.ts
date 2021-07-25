@@ -157,6 +157,7 @@ export const WorkCardBackClose = styled.button`
 export const WorkCardBackBody = styled.p`
   font: ${({ theme }) => theme.fontSubtitle};
   font-size: 0.75rem;
+  white-space: pre-wrap;
 
   @media only screen and (min-width: 768px) {
     font-size: 1rem;
