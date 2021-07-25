@@ -9,7 +9,7 @@ import { ContentContainer } from "../../AppStyles";
  */
 const Work = () => {
   return (
-    <WorkContainer>
+    <WorkContainer id="work">
       <ContentContainer>
         {/* TODO: Header */}
         <WorkCardList>

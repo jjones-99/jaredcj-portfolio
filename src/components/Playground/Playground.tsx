@@ -9,7 +9,7 @@ import { PLAY_ITEMS } from "./PlayItems";
  */
 const Playground = () => {
   return (
-    <PlaygroundContainer>
+    <PlaygroundContainer id="playground">
       {/* TODO: Section Header */}
       <PlaygroundGrid>
         {PLAY_ITEMS.map((item) => (
