@@ -43,7 +43,11 @@ const Footer = () => {
       <FooterCopy>© {year} Jared Jones</FooterCopy>
       <FooterCredits>
         <FooterCredit>
-          Icons by Mario from{" "}
+          Icons by{" "}
+          <a href="https://fontawesome.com" target="_blank" rel="noreferrer">
+            Font Awesome
+          </a>{" "}
+          and Mario from{" "}
           <a
             href="https://mariodelvalle.github.io/CaptainIconWeb/"
             target="_blank"

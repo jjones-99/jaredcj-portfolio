@@ -1,19 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ThinNavbarButton,
   ThinNavbarHeader,
   ThinNavbarItem,
   ThinNavbarMenu,
   ThinNavbarNav,
+  ThinNavbarSocial,
+  ThinNavbarSocials,
 } from "./ThinNavbarStyles";
 import cancel from "../../assets/cancel.svg";
 import hamburger from "../../assets/hamburger.svg";
+import { URL_LINKEDIN, URL_GITHUB, URL_CODEPEN } from "../../utils/constants";
 
 /**
  * Represents site navigation for the portfolio.
  */
 const ThinNavbar: React.FC = () => {
   const [renderMenu, setRenderMenu] = useState(false);
+
+  useEffect(() => {
+    const element = document.querySelector("html");
+    if (!element) return;
+    if (renderMenu) {
+      element.classList.add("disabled-scrolling");
+    } else {
+      element.classList.remove("disabled-scrolling");
+    }
+  }, [renderMenu]);
 
   return (
     <>
@@ -38,6 +51,23 @@ const ThinNavbar: React.FC = () => {
               Contact
             </ThinNavbarItem>
           </ThinNavbarNav>
+          <ThinNavbarSocials>
+            <ThinNavbarSocial>
+              <a href={URL_LINKEDIN} target="_blank" rel="noreferrer">
+                <i className="fa fa-linkedin"></i>
+              </a>
+            </ThinNavbarSocial>
+            <ThinNavbarSocial>
+              <a href={URL_GITHUB} target="_blank" rel="noreferrer">
+                <i className="fa fa-github"></i>
+              </a>
+            </ThinNavbarSocial>
+            <ThinNavbarSocial>
+              <a href={URL_CODEPEN} target="_blank" rel="noreferrer">
+                <i className="fa fa-codepen"></i>
+              </a>
+            </ThinNavbarSocial>
+          </ThinNavbarSocials>
         </ThinNavbarMenu>
       )}
     </>
