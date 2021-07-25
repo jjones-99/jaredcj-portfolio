@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const WorkContainer = styled.section`
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 `;
 
 export const WorkCardList = styled.ul`

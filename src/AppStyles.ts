@@ -24,6 +24,7 @@ export const ContentContainer = styled.div`
 export const SectionHeader = styled.header`
   place-items: center;
   text-align: center;
+  padding-top: 3rem;
   margin-bottom: 3rem;
 `;
 
