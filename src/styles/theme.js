@@ -6,9 +6,9 @@ const FONT_FAMILY_SECONDARY = '"Roboto Slab", serif';
 
 // The bars that stretch the screen and animate with the mouse.
 export const BARS = [
-  { color: "GoldenRod", size: "18rem" },
-  { color: "DodgerBlue", size: "14rem" },
-  { color: "Maroon", size: "8rem" },
+  { color: `hsl(${COLOR_HUE}, 54%, 93%)`, size: "18rem" },
+  { color: `hsl(${COLOR_HUE}, 54%, 82%)`, size: "14rem" },
+  { color: `hsl(${COLOR_HUE}, 54%, 71%)`, size: "8rem" },
 ];
 
 // The theme to use with styled components.
