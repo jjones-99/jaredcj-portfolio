@@ -2,7 +2,7 @@ import React from "react";
 import { PlaygroundContainer, PlaygroundGrid } from "./PlaygroundStyles";
 import PlayCard from "./PlayCard";
 import { PLAY_ITEMS } from "./PlayItems";
-import { SectionHeader, SectionSubtitle, SectionTitle } from "../../AppStyles";
+import { SectionHeader, SectionSubtitle, SectionTitle } from "../../styles/AppStyles";
 
 /**
  * Represents the playground section of the portfolio.

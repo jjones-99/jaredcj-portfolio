@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { toggleBodyScrolling } from "../../utils/helpers";
+import { setOverlayOpacity, toggleBodyScrolling } from "../../utils/helpers";
 import { WorkItem } from "./WorkItems";
 import {
   WorkDetailsBody,
@@ -30,6 +30,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ item }) => {
 
   useEffect(() => {
     toggleBodyScrolling(!showModal);
+    setOverlayOpacity(showModal ? "50%" : "0");
   }, [showModal]);
 
   const moreDetails = (

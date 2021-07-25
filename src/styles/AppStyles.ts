@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+/**
+ * Reusable styles for the entire app.
+ */
+
 export const ContentContainer = styled.div`
   width: 95%;
   margin: 0 auto;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
-import { ScreenOverlay } from "./AppStyles";
+import { ScreenOverlay } from "./styles/AppStyles";
 import Cursor from "./components/Cursor/Cursor";
 import FloatingObjects from "./components/FloatingObjects/FloatingObjects";
 import { Bar } from "./components/FloatingObjects/FloatingObjectsStyles";

@@ -2,7 +2,7 @@ import React from "react";
 import { WorkCardList, WorkCardListItem, WorkContainer } from "./WorkStyles";
 import { WORK_ITEMS } from "./WorkItems";
 import WorkCard from "./WorkCard";
-import { ContentContainer, SectionTitle, SectionSubtitle, SectionHeader } from "../../AppStyles";
+import { ContentContainer, SectionTitle, SectionSubtitle, SectionHeader } from "../../styles/AppStyles";
 
 /**
  * Represents the work section of the portfolio.
