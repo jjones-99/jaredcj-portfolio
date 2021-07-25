@@ -8,7 +8,7 @@ import { HeaderContainer, HeaderHome } from "./HeaderStyles";
 const Header: React.FC = () => {
   return (
     <HeaderContainer>
-      <HeaderHome>Jared Jones</HeaderHome>
+      <HeaderHome href="/">Jared Jones</HeaderHome>
       <Navbar />
     </HeaderContainer>
   );

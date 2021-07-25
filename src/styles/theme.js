@@ -40,8 +40,6 @@ export const theme = {
 
   // ========== Sizing ==========
 
-  headerHeight: `3rem`,
-
   // ========== Effects ==========
 
   boxShadow: `0 1.3rem 5rem 0 rgb(0 0 0 / 35%)`,
