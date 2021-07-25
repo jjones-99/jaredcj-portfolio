@@ -46,5 +46,5 @@ export const theme = {
   // ========== Effects ==========
 
   boxShadow: `0 1.3rem 5rem 0 rgba(0, 0, 0, .4)`,
-  textShadow: `1px 1px 11px rgba(0, 0, 0, 1.0)`,
+  textShadow: `5px 5px 11px rgba(0, 0, 0, 0.7)`,
 };
