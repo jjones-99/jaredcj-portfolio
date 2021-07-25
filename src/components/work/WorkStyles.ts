@@ -136,23 +136,29 @@ export const WorkDetailsCard = styled.article`
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1000;
 
   background-color: ${({ theme }) => theme.colorCardBackground};
   border-radius: 0.5rem;
   margin: 20% 10%;
+  padding: 1rem 2rem;
 
   overflow-y: scroll;
+
+  color: white;
 `;
 
 export const WorkDetailsHeader = styled.header`
   width: 100%;
   align-items: top;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 `;
 
 export const WorkDetailsTitle = styled.h3`
   font: ${({ theme }) => theme.fontTitle};
   font-size: 1.5rem;
-  float: left;
 
   @media only screen and (min-width: 768px) {
     font-size: 2rem;
@@ -163,17 +169,12 @@ export const WorkDetailsClose = styled.button`
   background: none;
   border: none;
   color: white;
-  float: right;
   font-size: 1.5rem;
   margin-top: -0.25rem;
 `;
 
 export const WorkDetailsBody = styled.p`
   font: ${({ theme }) => theme.fontSubtitle};
-  font-size: 0.75rem;
+  font-size: 1rem;
   white-space: pre-wrap;
-
-  @media only screen and (min-width: 768px) {
-    font-size: 1rem;
-  }
 `;
