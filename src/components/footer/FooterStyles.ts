@@ -35,6 +35,7 @@ export const FooterSocials = styled.ul`
   margin: 0;
   padding: 0;
   margin-bottom: 2rem;
+  text-align: center;
 `;
 
 export const FooterSocial = styled.li`
