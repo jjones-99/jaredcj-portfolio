@@ -40,7 +40,7 @@ const Footer = () => {
           </FooterSocialLink>
         </FooterSocial>
       </FooterSocials>
-      <FooterCopy>© {year} Jared Jones</FooterCopy>
+      <FooterCopy>© {year} Jared Jones - WIP</FooterCopy>
       <FooterCredits>
         <FooterCredit>
           Icons by{" "}
