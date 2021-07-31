@@ -4,7 +4,6 @@ const PLAYGROUND_CARD_BORDER_RADIUS = "3rem";
 
 export const PlaygroundContainer = styled.section`
   /* background-color: ${({ theme }) => theme.colorBackgroundDark}; */
-  padding: 0 15vw;
 `;
 
 export const PlaygroundGrid = styled.div`
@@ -12,15 +11,18 @@ export const PlaygroundGrid = styled.div`
   grid-template-columns: repeat(1, 1fr);
 
   @media only screen and (min-width: 480px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 10vw;
   }
 
   @media only screen and (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 20vw;
   }
 
   @media only screen and (min-width: 1024px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10vw;
   }
 
   @media only screen and (min-width: 1200px) {
@@ -66,8 +68,8 @@ export const PlaygroundCardHeader = styled.header`
 
 export const PlaygroundCardTitle = styled.h3`
   font: ${({ theme }) => theme.fontSubtitle};
-  font-size: 2rem;
   text-transform: uppercase;
+  font-size: 2rem;
 `;
 
 export const PlaygroundCardLinks = styled.ul`
