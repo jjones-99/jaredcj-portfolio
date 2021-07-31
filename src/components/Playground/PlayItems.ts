@@ -26,7 +26,7 @@ export const PLAY_ITEMS: PlayItem[] = [
     gallerySrcs: [],
     description: `Learning how to use three.js with textures and shaders.`,
     tags: ["TypeScript", "Vite", "three.js", "shaders"],
-    codepenLink: "https://codepen.io/jaredcj/pen/ZEKBmMQ",
+    codepenLink: "https://codepen.io/jaredcj/full/ZEKBmMQ",
     githubLink: "https://github.com/jjones-99/shining-text",
 
   },
@@ -37,7 +37,7 @@ export const PLAY_ITEMS: PlayItem[] = [
     gallerySrcs: [],
     description: `Experimenting with using three.js in React with three dimensions.`,
     tags: ["TypeScript", "React", "three.js"],
-    codepenLink: "https://codepen.io/jaredcj/pen/mdmKdQB",
+    codepenLink: "https://codepen.io/jaredcj/full/mdmKdQB",
     githubLink: "",
   },
   // {
