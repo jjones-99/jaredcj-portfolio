@@ -1,4 +1,5 @@
 import ProjectCards from "../../assets/experiments/ProjectCards.gif";
+import ShiningText from "../../assets/experiments/ShiningText.gif";
 
 /**
  * Defines the information an experiment/playground item should have.
@@ -21,23 +22,13 @@ export const PLAY_ITEMS: PlayItem[] = [
   {
     title: "Shining Text",
     time: "2021",
-    thumbnailSrc: "",
+    thumbnailSrc: ShiningText,
     gallerySrcs: [],
     description: `Learning how to use three.js with textures and shaders.`,
     tags: ["TypeScript", "Vite", "three.js", "shaders"],
-    codepenLink: "cpst",
-    githubLink: "ghst",
+    codepenLink: "https://codepen.io/jaredcj/pen/ZEKBmMQ",
+    githubLink: "https://github.com/jjones-99/shining-text",
 
-  },
-  {
-    title: "Icon Field",
-    time: "2021",
-    thumbnailSrc: "",
-    gallerySrcs: [],
-    description: `Experimenting with using three.js in React with three dimensions.`,
-    tags: ["TypeScript", "React", "three.js"],
-    codepenLink: "cpif",
-    githubLink: "",
   },
   {
     title: "These Cards",
@@ -49,4 +40,14 @@ export const PLAY_ITEMS: PlayItem[] = [
     codepenLink: "https://codepen.io/jaredcj/pen/mdmKdQB",
     githubLink: "",
   },
+  // {
+  //   title: "Icon Field",
+  //   time: "2021",
+  //   thumbnailSrc: "",
+  //   gallerySrcs: [],
+  //   description: `Experimenting with using three.js in React with three dimensions.`,
+  //   tags: ["TypeScript", "React", "three.js"],
+  //   codepenLink: "cpif",
+  //   githubLink: "",
+  // },
 ];
