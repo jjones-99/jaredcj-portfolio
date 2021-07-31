@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
+const PLAYGROUND_CARD_BORDER_RADIUS = "3rem";
+
 export const PlaygroundContainer = styled.section`
   /* background-color: ${({ theme }) => theme.colorBackgroundDark}; */
+  padding: 0 15vw;
 `;
 
 export const PlaygroundGrid = styled.div`
@@ -13,65 +16,86 @@ export const PlaygroundGrid = styled.div`
   }
 
   @media only screen and (min-width: 768px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media only screen and (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media only screen and (min-width: 1200px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
-export const PlaygroundCell = styled.article`
+/* ================================================================
+ * Playground Cards
+ */
+
+export const PlaygroundCard = styled.article<{ imageSrc: string }>`
   position: relative;
-  aspect-ratio: 5 / 4;
-  box-shadow: 0 20px 60px 0 rgb(0 0 0 / 15%);
-  background-color: ${({ theme }) => theme.colorBackgroundLight};
-  overflow: hidden;
+  margin: 0 3rem 3rem 3rem;
+  aspect-ratio: 1 / 1;
+  border-radius: ${PLAYGROUND_CARD_BORDER_RADIUS};
 
-  @media only screen and (min-width: 480px) {
-    aspect-ratio: 5 / 5;
-  }
+  background-image: url(${({ imageSrc }) => imageSrc});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
-  @media only screen and (min-width: 768px) {
-    aspect-ratio: 3 / 5;
-  }
-
-  @media only screen and (min-width: 1024px) {
-    aspect-ratio: 4 / 5;
-  }
-
-  @media only screen and (min-width: 1200px) {
-    aspect-ratio: 5 / 5;
-  }
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
+  color: white;
 `;
 
-export const PlaygroundCellContent = styled.div`
+export const PlaygroundCardBackgroundMask = styled.div`
   position: absolute;
-  width: 80%;
-  left: 10%;
-  bottom: 10%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 25%);
+  border-radius: ${PLAYGROUND_CARD_BORDER_RADIUS};
 `;
 
-export const PlaygroundCellHeader = styled.header``;
-
-export const PlaygroundCellTitle = styled.h3`
-  font: ${({ theme }) => theme.fontTitle};
-  font-size: 1rem;
-
-  @media only screen and (min-width: 480px) {
-    font-size: 1.2rem;
-  }
+export const PlaygroundCardHeader = styled.header`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 2rem;
 `;
 
-export const PlaygroundCellBody = styled.p`
+export const PlaygroundCardTitle = styled.h3`
   font: ${({ theme }) => theme.fontSubtitle};
-  font-size: 0.8rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+`;
 
-  @media only screen and (min-width: 768px) {
-    font-size: 1rem;
+export const PlaygroundCardLinks = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+`;
+
+export const PlaygroundCardLink = styled.li`
+  display: inline-block;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-size: 2.5rem;
+  transition: font-size 100ms;
+  vertical-align: top;
+
+  & a {
+    color: white;
+  }
+
+  &:hover {
+    font-size: 3rem;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 `;

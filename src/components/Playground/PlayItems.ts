@@ -1,3 +1,5 @@
+import ProjectCards from "../../assets/experiments/ProjectCards.gif";
+
 /**
  * Defines the information an experiment/playground item should have.
  */
@@ -8,7 +10,7 @@ export interface PlayItem {
   gallerySrcs?: string[];
   tags: string[];
   description: string;
-  demoLink?: string;
+  codepenLink?: string;
   githubLink?: string;
 }
 
@@ -23,7 +25,9 @@ export const PLAY_ITEMS: PlayItem[] = [
     gallerySrcs: [],
     description: `Learning how to use three.js with textures and shaders.`,
     tags: ["TypeScript", "Vite", "three.js", "shaders"],
-    demoLink: "",
+    codepenLink: "cpst",
+    githubLink: "ghst",
+
   },
   {
     title: "Icon Field",
@@ -32,6 +36,17 @@ export const PLAY_ITEMS: PlayItem[] = [
     gallerySrcs: [],
     description: `Experimenting with using three.js in React with three dimensions.`,
     tags: ["TypeScript", "React", "three.js"],
-    demoLink: "",
+    codepenLink: "cpif",
+    githubLink: "",
+  },
+  {
+    title: "These Cards",
+    time: "2021",
+    thumbnailSrc: ProjectCards,
+    gallerySrcs: [],
+    description: `Experimenting with using three.js in React with three dimensions.`,
+    tags: ["TypeScript", "React", "three.js"],
+    codepenLink: "https://codepen.io/jaredcj/pen/mdmKdQB",
+    githubLink: "",
   },
 ];
