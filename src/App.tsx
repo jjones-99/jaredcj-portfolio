@@ -11,6 +11,7 @@ import Playground from "./components/Playground/Playground";
 import Preloader from "./components/Preloader/Preloader";
 import Work from "./components/Work/Work";
 import { BARS, theme } from "./styles/theme";
+import ParticleBackground from "./components/Particles/ParticleBackground";
 
 function App() {
   const [preloader, setPreloader] = useState(false);
@@ -23,6 +24,7 @@ function App() {
       {!preloader && (
         <ThemeProvider theme={theme}>
           <ScreenOverlay id="mainOverlay" />
+          <ParticleBackground />
           {/* <FloatingObjects>
             {BARS.map(({ color, size }, index) => (
               <Bar width={size} color={color} key={index} />
