@@ -23,11 +23,11 @@ function App() {
       {!preloader && (
         <ThemeProvider theme={theme}>
           <ScreenOverlay id="mainOverlay" />
-          <FloatingObjects>
+          {/* <FloatingObjects>
             {BARS.map(({ color, size }, index) => (
               <Bar width={size} color={color} key={index} />
             ))}
-          </FloatingObjects>
+          </FloatingObjects> */}
           {/* <ThreeCanvas /> */}
           <Header />
           <Hero />

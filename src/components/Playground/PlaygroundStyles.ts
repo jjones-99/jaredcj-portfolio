@@ -4,6 +4,7 @@ const PLAYGROUND_CARD_BORDER_RADIUS = "3rem";
 
 export const PlaygroundContainer = styled.section`
   /* background-color: ${({ theme }) => theme.colorBackgroundDark}; */
+  margin-bottom: 8rem;
 `;
 
 export const PlaygroundGrid = styled.div`
