@@ -1,5 +1,6 @@
 import ProjectCardsThumbnail from "../../assets/experiments/ProjectCards.gif";
 import ShiningTextThumbnail from "../../assets/experiments/ShiningText.gif";
+import FloatingObjectsThumbnail from "../../assets/experiments/FloatingObjects.gif";
 
 /**
  * Defines the information an experiment/playground item should have.
@@ -37,6 +38,15 @@ export const PLAY_ITEMS: PlayItem[] = [
     description: `Designing/developing cards with HTML/CSS to represent experiments on my portfolio site.`,
     tags: ["TypeScript", "React", "three.js"],
     codepenLink: "https://codepen.io/jaredcj/full/mdmKdQB",
+  },
+  {
+    title: "Floating Objects",
+    time: "2021",
+    thumbnailSrc: FloatingObjectsThumbnail,
+    gallerySrcs: [],
+    description: `A simple method of creating objects that animate and follow the cursor.`,
+    tags: ["GSAP"],
+    codepenLink: "https://codepen.io/jaredcj/full/KKmBWpb",
   },
   // {
   //   title: "Icon Field",
