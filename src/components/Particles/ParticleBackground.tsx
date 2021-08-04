@@ -6,7 +6,7 @@ const PARTICLE_OPTIONS: RecursivePartial<IOptions> = {
   fpsLimit: 60,
   particles: {
     color: {
-      value: "#333333",
+      value: "#297c67",
     },
     links: {
       enable: false,
@@ -16,7 +16,7 @@ const PARTICLE_OPTIONS: RecursivePartial<IOptions> = {
       enable: true,
       outMode: "bounce",
       random: false,
-      speed: 0.2,
+      speed: 0.7,
       straight: false,
     },
     number: {
@@ -24,7 +24,7 @@ const PARTICLE_OPTIONS: RecursivePartial<IOptions> = {
         enable: true,
         value_area: 800,
       },
-      value: 50,
+      value: 70,
     },
     opacity: {
       value: 0.5,
