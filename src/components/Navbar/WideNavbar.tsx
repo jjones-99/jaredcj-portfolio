@@ -7,6 +7,7 @@ import { WideNavbarItem, WideNavbarNav } from "./WideNavbarStyles";
 const WideNavbar: React.FC = () => {
   return (
     <WideNavbarNav>
+      <WideNavbarItem href="#aboutme">About Me</WideNavbarItem>
       <WideNavbarItem href="#work">Work</WideNavbarItem>
       <WideNavbarItem href="#playground">Playground</WideNavbarItem>
       <WideNavbarItem href="#contact">Contact</WideNavbarItem>

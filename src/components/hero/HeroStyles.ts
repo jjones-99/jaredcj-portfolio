@@ -8,7 +8,6 @@ export const HeroContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: ${({theme}) => theme.sectionSpacerHeight};
 `;
 
 export const LandingTitle = styled.h1`

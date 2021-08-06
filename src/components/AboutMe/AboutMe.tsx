@@ -14,12 +14,12 @@ import {
 
 const AboutMe = () => {
   return (
-    <AboutMeContainer>
+    <AboutMeContainer id="aboutme">
       <AboutMeMain>
         <AboutMeBody>
           <p>
-            I'm passionate about tidy code and design. Things that are easy to maintain improve
-            productivity and positivity.
+            I'm passionate about tidy code and design. Maintainable work improves productivity and
+            positivity.
           </p>
           <p>
             I'm always looking to learn more about what I don't know and improve upon what I do.
@@ -44,6 +44,10 @@ const AboutMe = () => {
           </AboutMeSection>
           <AboutMeSection>
             <AboutMeHeader>Designer</AboutMeHeader>
+            <AboutMeInfo>
+              This section is still under construction! I don't yet have a lot of experience with
+              design, and I'm learning more constantly.
+            </AboutMeInfo>
             <AboutMeTopic>Tools I know</AboutMeTopic>
             <AboutMeInfo>Adobe XD, Figma</AboutMeInfo>
           </AboutMeSection>

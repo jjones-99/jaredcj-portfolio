@@ -36,6 +36,9 @@ const ThinNavbar: React.FC = () => {
             </ThinNavbarButton>
           </ThinNavbarHeader>
           <ThinNavbarNav>
+            <ThinNavbarItem onClick={() => setRenderMenu(false)} href="#aboutme">
+              About Me
+            </ThinNavbarItem>
             <ThinNavbarItem onClick={() => setRenderMenu(false)} href="#work">
               Work
             </ThinNavbarItem>

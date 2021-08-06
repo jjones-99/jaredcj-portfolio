@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const AboutMeContainer = styled.section`
   min-height: 40vh;
+  padding-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
