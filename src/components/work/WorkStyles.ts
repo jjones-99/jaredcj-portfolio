@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const WorkContainer = styled.section`
-  margin-top: 8rem;
-  margin-bottom: 8rem;
+  margin-bottom: ${({theme}) => theme.sectionSpacerHeight};
 `;
 
 export const WorkCardList = styled.ul`

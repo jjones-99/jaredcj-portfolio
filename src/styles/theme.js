@@ -43,6 +43,8 @@ export const theme = {
 
   // ========== Sizing ==========
 
+  sectionSpacerHeight: "8rem",
+
   // ========== Effects ==========
 
   boxShadow: `0 1.3rem 5rem 0 rgba(0, 0, 0, .4)`,

@@ -12,6 +12,8 @@ body {
   margin: 0;
   font-size: 16px;
   // overflow: overlay;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .disabled-scrolling {
@@ -28,4 +30,8 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   background-color: $color-primary-dark;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
