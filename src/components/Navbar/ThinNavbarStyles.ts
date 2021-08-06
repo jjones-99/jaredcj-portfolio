@@ -18,7 +18,7 @@ export const ThinNavbarMenu = styled.div`
 export const ThinNavbarHeader = styled.div`
   display: flex;
   justify-content: flex-end;
-  padding: 0.75rem;
+  padding: 0.75rem 3rem 0.75rem 0.75rem;
   height: 8%;
 `;
 
