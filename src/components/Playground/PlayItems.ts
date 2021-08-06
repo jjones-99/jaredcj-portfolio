@@ -1,6 +1,7 @@
 import ProjectCardsThumbnail from "../../assets/experiments/ProjectCards.gif";
 import ShiningTextThumbnail from "../../assets/experiments/ShiningText.gif";
 import FloatingObjectsThumbnail from "../../assets/experiments/FloatingObjects.gif";
+import ContactCardThumbnail from "../../assets/experiments/ContactCard.png";
 
 /**
  * Defines the information an experiment/playground item should have.
@@ -47,6 +48,15 @@ export const PLAY_ITEMS: PlayItem[] = [
     description: `A simple method of creating objects that animate and follow the cursor.`,
     tags: ["GSAP"],
     codepenLink: "https://codepen.io/jaredcj/full/KKmBWpb",
+  },
+  {
+    title: "Contact Card",
+    time: "2021",
+    thumbnailSrc: ContactCardThumbnail,
+    gallerySrcs: [],
+    description: `A glassmorphism contact card created with HTML and CSS.`,
+    tags: ["Glassmorphism"],
+    codepenLink: "https://codepen.io/jaredcj/full/zYwmeRK",
   },
   // {
   //   title: "Icon Field",
