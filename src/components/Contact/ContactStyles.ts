@@ -18,28 +18,7 @@ export const ContactFormContainer = styled.div<{ visible: boolean }>`
   pointer-events: ${({ visible }) => (visible ? "" : "none")};
 `;
 
-export const ContactForm = styled.form`
-  width: 80rem;
-  max-width: 80%;
-  margin: 0;
-  border-radius: 2rem;
-  padding: 2rem;
-
-  // https://glassmorphism.com
-  background: rgba(200, 200, 200, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-
-  transform: translate(0px, -100px);
-  transition: transform 400ms ease-in-out;
-
-  &.displayed {
-    transform: translate(0px, 0px);
-  }
-`;
+export const ContactFormElement = styled.form``;
 
 export const ContactFormHeader = styled.header`
   padding: 0rem 1rem;
@@ -50,7 +29,6 @@ export const ContactFormHeader = styled.header`
   h1 {
     color: rgb(40, 40, 40);
     margin-top: 0;
-    text-transform: uppercase;
     font-size: 1.5em;
   }
 `;
@@ -102,7 +80,7 @@ export const ContactFormTextarea = styled.textarea`
   font-size: 1em;
   font-family: "Spartan", sans-serif;
   min-height: 8rem;
-  resize: vertical;
+  resize: none;
   outline: none;
 
   &::-webkit-scrollbar {
@@ -149,4 +127,36 @@ export const ContactFormSubmitButton = styled.button`
   line-height: calc(1em * 2);
   background-color: ${({ theme }) => theme.colorPrimary};
   color: white;
+`;
+
+export const ContactFormBody = styled.p`
+  padding: 0rem 1rem;
+  color: rgb(40, 40, 40);
+`;
+
+export const ContactFormCard = styled.div`
+  width: 80rem;
+  max-width: 80%;
+  margin: 0;
+  border-radius: 2rem;
+  padding: 2rem;
+
+  // https://glassmorphism.com
+  background: rgba(200, 200, 200, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  transform: translateY(-100px);
+  transition: transform 400ms ease-in-out;
+
+  &.form {
+    transform: translateY(0px);
+  }
+
+  &.thank-you {
+    transform: translateY(0px);
+  }
 `;
