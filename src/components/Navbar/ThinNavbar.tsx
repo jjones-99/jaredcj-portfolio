@@ -8,8 +8,6 @@ import {
   ThinNavbarSocial,
   ThinNavbarSocials,
 } from "./ThinNavbarStyles";
-import cancel from "../../assets/cancel.svg";
-import hamburger from "../../assets/hamburger.svg";
 import { URL_LINKEDIN, URL_GITHUB, URL_CODEPEN } from "../../utils/constants";
 import { toggleBodyScrolling } from "../../utils/helpers";
 import { AppContext } from "../../App";
@@ -27,14 +25,14 @@ const ThinNavbar: React.FC = () => {
 
   return (
     <>
-      <ThinNavbarButton onClick={() => setRenderMenu(true)}>
-        <img src={hamburger} title="Open menu" />
+      <ThinNavbarButton onClick={() => setRenderMenu(true)} title="Open menu">
+        <i className="fas fa-bars" />
       </ThinNavbarButton>
       {renderMenu && (
         <ThinNavbarMenu>
           <ThinNavbarHeader>
-            <ThinNavbarButton onClick={() => setRenderMenu(false)}>
-              <img src={cancel} title="Close menu" />
+            <ThinNavbarButton onClick={() => setRenderMenu(false)} title="Close menu">
+              <i className="fas fa-times" />
             </ThinNavbarButton>
           </ThinNavbarHeader>
           <ThinNavbarNav>

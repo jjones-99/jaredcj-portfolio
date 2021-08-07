@@ -47,14 +47,6 @@ const Footer = () => {
           <a href="https://fontawesome.com" target="_blank" rel="noreferrer">
             Font Awesome
           </a>{" "}
-          and Mario from{" "}
-          <a
-            href="https://mariodelvalle.github.io/CaptainIconWeb/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Captain Icon
-          </a>
         </FooterCredit>
       </FooterCredits>
     </FooterContainer>

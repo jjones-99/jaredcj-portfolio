@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ThinNavbarButton = styled.button`
   border: none;
   background: none;
+  font-size: 2em;
 `;
 
 export const ThinNavbarMenu = styled.div`
