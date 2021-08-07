@@ -1,11 +1,7 @@
 import React from "react";
 import { AppContext } from "../../App";
-import {
-  ContactFormBody,
-  ContactFormCloseButton,
-  ContactFormHeader,
-  ContactFormCard,
-} from "./ContactStyles";
+import { IconButton } from "../../styles/AppStyles";
+import { ContactFormBody, ContactFormHeader } from "./ContactStyles";
 
 const ContactThankYou: React.FC = () => {
   const { setRenderContactForm } = React.useContext(AppContext);
@@ -14,9 +10,9 @@ const ContactThankYou: React.FC = () => {
     <>
       <ContactFormHeader>
         <h1>Thanks for getting in touch.</h1>
-        <ContactFormCloseButton type="button" onClick={() => setRenderContactForm!(false)}>
+        <IconButton type="button" onClick={() => setRenderContactForm!(false)}>
           <i className="fa fa-close" />
-        </ContactFormCloseButton>
+        </IconButton>
       </ContactFormHeader>
       <ContactFormBody>I'll get back to you shortly.</ContactFormBody>
     </>

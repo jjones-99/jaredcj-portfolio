@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { AppContext } from "../../App";
+import { IconButton } from "../../styles/AppStyles";
+import { URL_CODEPEN, URL_GITHUB, URL_LINKEDIN } from "../../utils/constants";
+import { toggleBodyScrolling } from "../../utils/helpers";
 import {
-  ThinNavbarButton,
   ThinNavbarHeader,
   ThinNavbarItem,
   ThinNavbarMenu,
   ThinNavbarNav,
   ThinNavbarSocial,
-  ThinNavbarSocials,
+  ThinNavbarSocials
 } from "./ThinNavbarStyles";
-import { URL_LINKEDIN, URL_GITHUB, URL_CODEPEN } from "../../utils/constants";
-import { toggleBodyScrolling } from "../../utils/helpers";
-import { AppContext } from "../../App";
 
 /**
  * Represents site navigation for the portfolio.
@@ -25,15 +25,15 @@ const ThinNavbar: React.FC = () => {
 
   return (
     <>
-      <ThinNavbarButton onClick={() => setRenderMenu(true)} title="Open menu">
+      <IconButton onClick={() => setRenderMenu(true)} title="Open menu">
         <i className="fas fa-bars" />
-      </ThinNavbarButton>
+      </IconButton>
       {renderMenu && (
         <ThinNavbarMenu>
           <ThinNavbarHeader>
-            <ThinNavbarButton onClick={() => setRenderMenu(false)} title="Close menu">
+            <IconButton onClick={() => setRenderMenu(false)} title="Close menu">
               <i className="fas fa-times" />
-            </ThinNavbarButton>
+            </IconButton>
           </ThinNavbarHeader>
           <ThinNavbarNav>
             <ThinNavbarItem onClick={() => setRenderMenu(false)} href="#aboutme">

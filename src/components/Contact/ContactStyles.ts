@@ -33,13 +33,6 @@ export const ContactFormHeader = styled.header`
   }
 `;
 
-export const ContactFormCloseButton = styled.button`
-  color: rgb(40, 40, 40);
-  background: none;
-  border: none;
-  font-size: 2em;
-`;
-
 export const ContactFormFieldset = styled.fieldset`
   border: none;
   padding: 0;
@@ -112,21 +105,6 @@ export const ContactFormFooter = styled.footer`
   justify-content: flex-end;
   align-items: center;
   margin-top: 1rem;
-`;
-
-export const ContactFormSubmitButton = styled.button`
-  font-family: "Spartan", sans-serif;
-  font-size: 1em;
-  font-weight: 500;
-  padding: 0.2em 2em;
-  border-radius: 100em;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: calc(1em * 2);
-  background-color: ${({ theme }) => theme.colorPrimary};
-  color: white;
 `;
 
 export const ContactFormBody = styled.p`

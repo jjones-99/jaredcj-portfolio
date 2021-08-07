@@ -58,6 +58,53 @@ export const SectionSubtitle = styled.h6`
   text-transform: uppercase;
 `;
 
+export const PrimaryButtonLink = styled.a<{ light?: boolean }>`
+  font: ${({ theme }) => theme.fontText};
+  font-size: 1em;
+  font-weight: 500;
+  line-height: calc(1em * 2);
+  text-decoration: none;
+  color: ${({ light, theme }) => (light ? theme.colorPrimary : "white")};
+
+  padding: 0.2em 2em;
+  border-radius: 100000px;
+  border: none;
+  background-color: ${({ light, theme }) => (light ? "white" : theme.colorPrimary)};
+
+  cursor: pointer;
+
+  &:hover {
+    color: ${({ light, theme }) => (light ? theme.colorPrimary : "white")};
+    filter: brightness(85%);
+  }
+`;
+
+export const PrimaryButton = styled.button<{ light?: boolean }>`
+  font: ${({ theme }) => theme.fontText};
+  font-size: 1em;
+  font-weight: 500;
+  line-height: calc(1em * 2);
+  color: ${({ light, theme }) => (light ? theme.colorPrimary : "white")};
+
+  padding: 0.2em 2em;
+  border-radius: 100000px;
+  border: none;
+  background-color: ${({ light, theme }) => (light ? "" : theme.colorPrimary)};
+
+  cursor: pointer;
+
+  &:hover {
+    color: ${({ light, theme }) => (light ? theme.colorPrimary : "white")};
+    filter: brightness(85%);
+  }
+`;
+
+export const IconButton = styled.button`
+  background: none;
+  border: none;
+  font-size: 2em;
+`;
+
 // Merely for copying common breakpoints.
 const Breakpoints = styled.div`
   @media only screen and (min-width: 480px) {

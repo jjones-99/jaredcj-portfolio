@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { IconButton, PrimaryButton, PrimaryButtonLink } from "../../styles/AppStyles";
 import { setOverlayOpacity, toggleBodyScrolling } from "../../utils/helpers";
 import { WorkItem } from "./WorkItems";
 import {
-  WorkDetailsBody,
-  WorkDetailsClose,
-  WorkDetailsHeader,
-  WorkDetailsTitle,
   WorkCardBody,
-  WorkCardButton,
   WorkCardContainer,
   WorkCardContent,
-  WorkCardCorner,
-  WorkCardHeader,
-  WorkCardTitle,
+  WorkDetailsBody,
   WorkDetailsCard,
-  WorkCardLink,
+  WorkDetailsHeader,
+  WorkDetailsTitle,
 } from "./WorkStyles";
 
 export interface WorkCardProps {
@@ -38,20 +33,22 @@ const WorkCard: React.FC<WorkCardProps> = ({ item }) => {
     <WorkDetailsCard className="">
       <WorkDetailsHeader>
         <WorkDetailsTitle>{item.title}</WorkDetailsTitle>
-        <WorkDetailsClose onClick={() => setShowModal(false)}>
+        <IconButton onClick={() => setShowModal(false)}>
           <i className="fa fa-close"></i>
-        </WorkDetailsClose>
+        </IconButton>
       </WorkDetailsHeader>
       <WorkDetailsBody>{item.summary}</WorkDetailsBody>
     </WorkDetailsCard>
   );
 
   const buttonOption = item.buttonLink ? (
-    <WorkCardLink href={item.buttonLink} target="_blank" rel="no-referrer">
+    <PrimaryButtonLink light={true} href={item.buttonLink} target="_blank" rel="no-referrer">
       Visit Website
-    </WorkCardLink>
+    </PrimaryButtonLink>
   ) : (
-    <WorkCardButton onClick={() => setShowModal(true)}>Read More</WorkCardButton>
+    <PrimaryButton light={true} onClick={() => setShowModal(true)}>
+      Read More
+    </PrimaryButton>
   );
 
   return (

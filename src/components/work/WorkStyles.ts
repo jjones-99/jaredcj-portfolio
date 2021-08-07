@@ -123,41 +123,6 @@ export const WorkCardBody = styled.p`
   text-align: center;
 `;
 
-export const WorkCardButton = styled.button`
-  font: ${({ theme }) => theme.fontButton};
-  padding: 0.8em 1.8em;
-  background: white;
-  border: none;
-  border-radius: 1000px;
-  text-align: center;
-  line-height: normal;
-  color: ${({ theme }) => theme.colorPrimary};
-
-  @media only screen and (min-width: 768px) {
-    font-size: 1rem;
-  }
-`;
-
-export const WorkCardLink = styled.a`
-  font: ${({ theme }) => theme.fontButton};
-  padding: 0.8em 1.8em;
-  background: white;
-  border: none;
-  border-radius: 1000px;
-  text-align: center;
-  line-height: normal;
-  color: ${({ theme }) => theme.colorPrimary};
-  text-decoration: none;
-
-  @media only screen and (min-width: 768px) {
-    font-size: 1rem;
-  }
-
-  &:hover {
-    color: ${({ theme }) => theme.colorPrimary};
-  }
-`;
-
 export const WorkDetailsCard = styled.article`
   position: fixed;
   top: 0;
@@ -208,14 +173,6 @@ export const WorkDetailsTitle = styled.h3`
   @media only screen and (min-width: 768px) {
     font-size: 2rem;
   }
-`;
-
-export const WorkDetailsClose = styled.button`
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  margin-top: -0.25rem;
 `;
 
 export const WorkDetailsBody = styled.p`

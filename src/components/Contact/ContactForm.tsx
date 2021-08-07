@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { AppContext } from "../../App";
+import { IconButton, PrimaryButton } from "../../styles/AppStyles";
 import {
-  ContactFormCloseButton,
   ContactFormElement,
   ContactFormField,
   ContactFormFieldset,
@@ -10,7 +10,6 @@ import {
   ContactFormInput,
   ContactFormLabel,
   ContactFormRow,
-  ContactFormSubmitButton,
   ContactFormTextarea,
 } from "./ContactStyles";
 
@@ -54,9 +53,9 @@ const ContactForm: React.FC<ContactFormProps> = (props) => {
     <ContactFormElement onSubmit={onContactSubmit}>
       <ContactFormHeader>
         <h1>I'd love to hear from you.</h1>
-        <ContactFormCloseButton type="button" onClick={() => setRenderContactForm!(false)}>
+        <IconButton type="button" onClick={() => setRenderContactForm!(false)}>
           <i className="fa fa-close" />
-        </ContactFormCloseButton>
+        </IconButton>
       </ContactFormHeader>
       <ContactFormFieldset>
         <ContactFormRow>
@@ -95,7 +94,7 @@ const ContactForm: React.FC<ContactFormProps> = (props) => {
         </ContactFormField>
       </ContactFormFieldset>
       <ContactFormFooter>
-        <ContactFormSubmitButton type="submit">Submit</ContactFormSubmitButton>
+        <PrimaryButton type="submit">Submit</PrimaryButton>
       </ContactFormFooter>
       <input type="hidden" name="_subject" value="" />
       <input type="hidden" name="_template" value="" />

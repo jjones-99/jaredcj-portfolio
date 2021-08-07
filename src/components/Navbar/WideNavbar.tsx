@@ -1,5 +1,6 @@
 import React from "react";
 import { AppContext } from "../../App";
+import { PrimaryButton } from "../../styles/AppStyles";
 import { WideNavbarItem, WideNavbarNav } from "./WideNavbarStyles";
 
 /**
@@ -13,7 +14,9 @@ const WideNavbar: React.FC = () => {
       <WideNavbarItem href="#aboutme">About Me</WideNavbarItem>
       <WideNavbarItem href="#work">Work</WideNavbarItem>
       <WideNavbarItem href="#playground">Playground</WideNavbarItem>
-      <WideNavbarItem onClick={() => setRenderContactForm!(true)}>Contact</WideNavbarItem>
+      <PrimaryButton onClick={() => setRenderContactForm!(true)}>
+        Contact
+      </PrimaryButton>
     </WideNavbarNav>
   );
 };

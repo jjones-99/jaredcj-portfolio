@@ -6,8 +6,8 @@ export const HeaderContainer = styled.header`
   left: 0;
   right: 0;
   padding: 0.75rem 2rem 0.75rem 0.75rem;
-  background: white;
-  border-bottom: 1px solid black;
+  /* background: white; */
+  /* border-bottom: 1px solid black; */
 
   display: flex;
   justify-content: space-between;
