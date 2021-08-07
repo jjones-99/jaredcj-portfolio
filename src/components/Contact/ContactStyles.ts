@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContactFormContainer = styled.div`
+export const ContactFormContainer = styled.div<{ visible: boolean }>`
   position: fixed;
   top: 0;
   bottom: 0;
@@ -13,6 +13,9 @@ export const ContactFormContainer = styled.div`
   align-items: center;
   font-family: "Spartan", sans-serif;
   font-size: 1.2rem;
+
+  opacity: ${({ visible }) => (visible ? "1" : "0")};
+  pointer-events: ${({ visible }) => (visible ? "" : "none")};
 `;
 
 export const ContactForm = styled.form`
@@ -29,6 +32,13 @@ export const ContactForm = styled.form`
   -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+
+  transform: translate(0px, -100px);
+  transition: transform 400ms ease-in-out;
+
+  &.displayed {
+    transform: translate(0px, 0px);
+  }
 `;
 
 export const ContactFormHeader = styled.header`

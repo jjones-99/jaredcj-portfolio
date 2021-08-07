@@ -41,15 +41,6 @@ export const PLAY_ITEMS: PlayItem[] = [
     codepenLink: "https://codepen.io/jaredcj/full/mdmKdQB",
   },
   {
-    title: "Floating Objects",
-    time: "2021",
-    thumbnailSrc: FloatingObjectsThumbnail,
-    gallerySrcs: [],
-    description: `A simple method of creating objects that animate and follow the cursor.`,
-    tags: ["GSAP"],
-    codepenLink: "https://codepen.io/jaredcj/full/KKmBWpb",
-  },
-  {
     title: "Contact Card",
     time: "2021",
     thumbnailSrc: ContactCardThumbnail,
@@ -57,6 +48,15 @@ export const PLAY_ITEMS: PlayItem[] = [
     description: `A glassmorphism contact card created with HTML and CSS.`,
     tags: ["Glassmorphism"],
     codepenLink: "https://codepen.io/jaredcj/full/zYwmeRK",
+  },
+  {
+    title: "Floating Objects",
+    time: "2021",
+    thumbnailSrc: FloatingObjectsThumbnail,
+    gallerySrcs: [],
+    description: `A simple method of creating objects that animate and follow the cursor.`,
+    tags: ["GSAP"],
+    codepenLink: "https://codepen.io/jaredcj/full/KKmBWpb",
   },
   // {
   //   title: "Icon Field",
