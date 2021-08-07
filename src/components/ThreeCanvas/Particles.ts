@@ -48,8 +48,7 @@ const PARTICLE_CONFIG: IParticle[] = [
  * @param name The name of the file to use, within 'assets/particles'.
  * @returns The fully qualified path to the particle texture.
  */
-const getParticlePath = (name: string) =>
-  `https://raw.githubusercontent.com/jjones-99/jaredcj-portfolio/34637256ec0e8638d7d4b3be3c6ffc862bfe40c1/src/assets/particles/${name}.png`;
+const getParticlePath = (name: string) => `/assets/particles/${name}.png`;
 
 /**
  * Generate random BufferGeometry with the given number of particles.
@@ -62,7 +61,7 @@ const generateParticleGeometry = (count: number): THREE.BufferGeometry => {
   for (let i = 0; i < count; i++) {
     const x = (Math.random() - 0.5) * 30;
     const y = (Math.random() - 0.5) * 30;
-    const z = (Math.random()) * 10 - 10;
+    const z = Math.random() * 10 - 10;
     arr[3 * i] = x;
     arr[3 * i + 1] = y;
     arr[3 * i + 2] = z;

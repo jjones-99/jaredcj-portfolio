@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import titleMesh from "../../assets/gradients/mesh-2.png";
 
 export const HeroContainer = styled.section`
   position: relative;
@@ -27,7 +26,7 @@ export const LandingTitle = styled.h1`
   }
 
   // Background animated mesh gradient.
-  background-image: url(${titleMesh});
+  background-image: url("/assets/gradients/mesh-2.png");
   background-repeat: no-repeat;
   background-size: 200%;
   background-clip: text;

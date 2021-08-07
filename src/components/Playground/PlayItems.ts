@@ -1,8 +1,3 @@
-import ProjectCardsThumbnail from "../../assets/experiments/ProjectCards.gif";
-import ShiningTextThumbnail from "../../assets/experiments/ShiningText.gif";
-import FloatingObjectsThumbnail from "../../assets/experiments/FloatingObjects.gif";
-import ContactCardThumbnail from "../../assets/experiments/ContactCard.png";
-
 /**
  * Defines the information an experiment/playground item should have.
  */
@@ -24,7 +19,7 @@ export const PLAY_ITEMS: PlayItem[] = [
   {
     title: "Shining Text",
     time: "2021",
-    thumbnailSrc: ShiningTextThumbnail,
+    thumbnailSrc: "/assets/experiments/ProjectCards.gif",
     gallerySrcs: [],
     description: `Learning how to use three.js with textures and shaders.`,
     tags: ["TypeScript", "Vite", "three.js", "shaders"],
@@ -34,7 +29,7 @@ export const PLAY_ITEMS: PlayItem[] = [
   {
     title: "These Cards",
     time: "2021",
-    thumbnailSrc: ProjectCardsThumbnail,
+    thumbnailSrc: "/assets/experiments/ShiningText.gif",
     gallerySrcs: [],
     description: `Designing/developing cards with HTML/CSS to represent experiments on my portfolio site.`,
     tags: ["TypeScript", "React", "three.js"],
@@ -43,7 +38,7 @@ export const PLAY_ITEMS: PlayItem[] = [
   {
     title: "Contact Card",
     time: "2021",
-    thumbnailSrc: ContactCardThumbnail,
+    thumbnailSrc: "/assets/experiments/FloatingObjects.gif",
     gallerySrcs: [],
     description: `A glassmorphism contact card created with HTML and CSS.`,
     tags: ["Glassmorphism"],
@@ -52,7 +47,7 @@ export const PLAY_ITEMS: PlayItem[] = [
   {
     title: "Floating Objects",
     time: "2021",
-    thumbnailSrc: FloatingObjectsThumbnail,
+    thumbnailSrc: "/assets/experiments/ContactCard.png",
     gallerySrcs: [],
     description: `A simple method of creating objects that animate and follow the cursor.`,
     tags: ["GSAP"],
