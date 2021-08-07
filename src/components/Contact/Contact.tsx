@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { toggleBodyScrolling } from "../../utils/helpers";
+import { setOverlayOpacity, toggleBodyScrolling } from "../../utils/helpers";
 import {
   ContactForm,
   ContactFormCloseButton,
@@ -21,6 +21,7 @@ const Contact = () => {
   // Disable scrolling when the contact form is visible.
   useEffect(() => {
     toggleBodyScrolling(!renderContactForm);
+    setOverlayOpacity(renderContactForm ? "30%" : "0");
   }, [renderContactForm]);
 
   return (
@@ -30,7 +31,7 @@ const Contact = () => {
           <ContactForm>
             <ContactFormHeader>
               <h1>I'd love to hear from you.</h1>
-              <ContactFormCloseButton>
+              <ContactFormCloseButton type="button" onClick={() => setRenderContactForm(false)}>
                 <i className="fa fa-close" />
               </ContactFormCloseButton>
             </ContactFormHeader>
