@@ -4,11 +4,6 @@ const PLAYGROUND_CARD_BORDER_RADIUS = "3rem";
 
 export const PlaygroundContainer = styled.section`
   margin-bottom: ${({ theme }) => theme.sectionSpacerHeight};
-
-  // TODO: Why does this section not work on phones, but they do on narrow desktop browsers?
-  @media only screen and (hover: none) {
-    display: none;
-  }
 `;
 
 export const PlaygroundGrid = styled.div`

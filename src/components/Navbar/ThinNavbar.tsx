@@ -9,7 +9,7 @@ import {
   ThinNavbarMenu,
   ThinNavbarNav,
   ThinNavbarSocial,
-  ThinNavbarSocials
+  ThinNavbarSocials,
 } from "./ThinNavbarStyles";
 
 /**
@@ -39,10 +39,18 @@ const ThinNavbar: React.FC = () => {
             <ThinNavbarItem onClick={() => setRenderMenu(false)} href="#aboutme">
               About Me
             </ThinNavbarItem>
-            <ThinNavbarItem onClick={() => setRenderMenu(false)} href="#work">
+            <ThinNavbarItem
+              className="hide-on-hoverless"
+              onClick={() => setRenderMenu(false)}
+              href="#work"
+            >
               Work
             </ThinNavbarItem>
-            <ThinNavbarItem onClick={() => setRenderMenu(false)} href="#playground">
+            <ThinNavbarItem
+              className="hide-on-hoverless"
+              onClick={() => setRenderMenu(false)}
+              href="#playground"
+            >
               Playground
             </ThinNavbarItem>
             <ThinNavbarItem

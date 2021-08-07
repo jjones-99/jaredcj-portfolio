@@ -14,7 +14,7 @@ import { WorkCardGrid, WorkContainer } from "./WorkStyles";
  */
 const Work = () => {
   return (
-    <WorkContainer id="work">
+    <WorkContainer id="work" className="hide-on-hoverless">
       <SectionHeader>
         <SectionSubtitle>Projects</SectionSubtitle>
         <SectionTitle>Recent Work</SectionTitle>

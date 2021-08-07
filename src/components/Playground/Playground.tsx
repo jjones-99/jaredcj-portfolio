@@ -10,7 +10,7 @@ import { SectionHeader, SectionSubtitle, SectionTitle } from "../../styles/AppSt
  */
 const Playground = () => {
   return (
-    <PlaygroundContainer id="playground">
+    <PlaygroundContainer id="playground" className="hide-on-hoverless">
         <SectionHeader>
           <SectionSubtitle>Playground</SectionSubtitle>
           <SectionTitle>Recent Experiments</SectionTitle>

@@ -64,6 +64,7 @@ export const ContactFormInput = styled.input`
   font-size: 1em;
   font-family: "Spartan", sans-serif;
   outline: none;
+  max-width: 50vw;
 `;
 
 export const ContactFormTextarea = styled.textarea`
