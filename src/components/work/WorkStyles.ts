@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const WorkContainer = styled.section`
   margin-bottom: ${({ theme }) => theme.sectionSpacerHeight};
+
+  // TODO: Why does this section not work on phones, but they do on narrow desktop browsers?
+  @media only screen and (hover: none) {
+    display: none;
+  }
 `;
 
 export const WorkCardGrid = styled.div`
