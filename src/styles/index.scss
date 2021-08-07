@@ -39,6 +39,6 @@ p:last-child {
 // TODO: Why do jobs/work not work on phones, but they do on narrow desktop browsers?
 @media only screen and (hover: none) {
   .hide-on-hoverless {
-    display: none;
+    display: none !important;
   }
 }
