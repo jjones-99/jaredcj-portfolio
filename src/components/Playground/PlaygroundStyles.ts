@@ -93,8 +93,10 @@ export const PlaygroundCardLink = styled.li`
     color: white;
   }
 
-  &:hover {
-    font-size: 3rem;
+  @media only screen and (hover: hover) {
+    &:hover {
+      font-size: 3rem;
+    }
   }
 
   &:last-child {

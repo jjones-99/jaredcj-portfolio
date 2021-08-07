@@ -63,6 +63,13 @@ export const WorkCardContainer = styled.article<{ imageSrc: string }>`
       opacity: 1;
     }
   }
+
+  @media (hover: none) {
+    &::before,
+    & * {
+      display: none;
+    }
+  }
 `;
 
 export const WorkCardCorner = styled.div`
