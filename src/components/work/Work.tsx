@@ -1,8 +1,13 @@
 import React from "react";
-import { WorkCardList, WorkCardListItem, WorkContainer } from "./WorkStyles";
-import { WORK_ITEMS } from "./WorkItems";
+import {
+  ContentContainer,
+  SectionHeader,
+  SectionSubtitle,
+  SectionTitle,
+} from "../../styles/AppStyles";
 import WorkCard from "./WorkCard";
-import { ContentContainer, SectionTitle, SectionSubtitle, SectionHeader } from "../../styles/AppStyles";
+import { WORK_ITEMS } from "./WorkItems";
+import { WorkCardGrid, WorkContainer } from "./WorkStyles";
 
 /**
  * Represents the work section of the portfolio.
@@ -10,19 +15,15 @@ import { ContentContainer, SectionTitle, SectionSubtitle, SectionHeader } from "
 const Work = () => {
   return (
     <WorkContainer id="work">
-      <ContentContainer>
-        <SectionHeader>
-          <SectionSubtitle>Projects</SectionSubtitle>
-          <SectionTitle>Recent Work</SectionTitle>
-        </SectionHeader>
-        <WorkCardList>
-          {WORK_ITEMS.map((item) => (
-            <WorkCardListItem key={item.title}>
-              <WorkCard item={item} />
-            </WorkCardListItem>
-          ))}
-        </WorkCardList>
-      </ContentContainer>
+      <SectionHeader>
+        <SectionSubtitle>Projects</SectionSubtitle>
+        <SectionTitle>Recent Work</SectionTitle>
+      </SectionHeader>
+      <WorkCardGrid>
+        {WORK_ITEMS.map((item) => (
+          <WorkCard item={item} key={item.title} />
+        ))}
+      </WorkCardGrid>
     </WorkContainer>
   );
 };

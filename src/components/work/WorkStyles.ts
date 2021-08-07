@@ -1,52 +1,69 @@
 import styled from "styled-components";
 
 export const WorkContainer = styled.section`
-  margin-bottom: ${({theme}) => theme.sectionSpacerHeight};
+  margin-bottom: ${({ theme }) => theme.sectionSpacerHeight};
 `;
 
-export const WorkCardList = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-`;
+export const WorkCardGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0 5%;
 
-export const WorkCardListItem = styled.li`
-  margin-bottom: 7rem;
+  @media only screen and (min-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-  &:last-child {
-    margin-bottom: 0;
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2%;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 10%;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
 export const WorkCardContainer = styled.article<{ imageSrc: string }>`
   position: relative;
+  margin: 0 2rem 2rem 2rem;
+  aspect-ratio: 4 / 3;
+  border-radius: 0.5rem;
+
   background-color: ${({ theme }) => theme.colorCardBackground};
   background-image: url(${({ imageSrc }) => imageSrc});
   background-size: cover;
-  aspect-ratio: 3 / 3;
+  background-position: center;
+
   box-shadow: ${({ theme }) => theme.boxShadow};
-  border-radius: 0.5rem;
-  margin: 0 auto;
-
-  width: 80%;
-  @media only screen and (min-width: 480px) {
-    font-size: 4rem;
-    aspect-ratio: 3 / 2;
-  }
-
-  @media only screen and (min-width: 1024px) {
-    aspect-ratio: 5 / 3;
-  }
 
   &::before {
     content: "";
-    background: rgb(0 0 0 / 60%);
+    background: ${({ theme }) => theme.colorPrimary};
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     border-radius: 0.5rem;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+
+  & > * {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+
+  &:hover {
+    &::before,
+    & > * {
+      opacity: 1;
+    }
   }
 `;
 
@@ -57,75 +74,94 @@ export const WorkCardCorner = styled.div`
   left: -0.5rem;
   font: ${({ theme }) => theme.fontDecor};
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-shadow: ${({ theme }) => theme.textShadow};
 
   @media only screen and (min-width: 480px) {
     display: block;
     top: -0.2em;
     left: -0.5em;
-    font-size: 2.5rem;
+    font-size: 1rem;
   }
-
-  @media only screen and (min-width: 768px) {
-    font-size: 4rem;
-  }
-`;
-
-export const WorkCardContent = styled.div<{ alignX: string; alignY: string }>`
-  position: relative;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: ${({ alignX }) => alignX};
-  justify-content: ${({ alignY }) => alignY};
-  padding: 2rem 1rem;
-
-  // Text
-  color: white;
-
-  @media only screen and (min-width: 768px) {
-    padding: 5rem 5rem;
-  }
-`;
-
-export const WorkCardHeader = styled.header``;
-
-export const WorkCardTitle = styled.h3`
-  font: ${({ theme }) => theme.fontTitle};
-  font-size: 1.5rem;
-  float: right;
-  text-align: right;
 
   @media only screen and (min-width: 768px) {
     font-size: 2rem;
   }
 `;
 
+export const WorkCardContent = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 4em;
+
+  // Text
+  color: white;
+
+  @media only screen and (min-width: 768px) {
+    padding: 2rem 1rem;
+  }
+`;
+
+export const WorkCardHeader = styled.header`
+  font: ${({ theme }) => theme.fontSubtitle};
+  text-align: center;
+`;
+
+export const WorkCardTitle = styled.h3`
+  font: ${({ theme }) => theme.fontTitle};
+  font-size: 1rem;
+  text-align: right;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 1.5rem;
+  }
+`;
+
 export const WorkCardBody = styled.p`
   font: ${({ theme }) => theme.fontSubtitle};
-  font-size: 0.75rem;
-  float: right;
-  text-align: right;
+  font-size: 1.2rem;
+  text-align: center;
+`;
+
+export const WorkCardButton = styled.button`
+  font: ${({ theme }) => theme.fontButton};
+  padding: 0.8em 1.8em;
+  background: white;
+  border: none;
+  border-radius: 1000px;
+  text-align: center;
+  line-height: normal;
+  color: ${({ theme }) => theme.colorPrimary};
 
   @media only screen and (min-width: 768px) {
     font-size: 1rem;
   }
 `;
 
-export const WorkCardButton = styled.button`
+export const WorkCardLink = styled.a`
   font: ${({ theme }) => theme.fontButton};
-  font-size: 0.75rem;
   padding: 0.8em 1.8em;
-  background: ${({ theme }) => theme.colorPrimaryLight};
+  background: white;
   border: none;
+  border-radius: 1000px;
   text-align: center;
   line-height: normal;
-  color: white;
+  color: ${({ theme }) => theme.colorPrimary};
+  text-decoration: none;
 
   @media only screen and (min-width: 768px) {
     font-size: 1rem;
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.colorPrimary};
   }
 `;
 

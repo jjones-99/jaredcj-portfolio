@@ -3,7 +3,7 @@ import styled from "styled-components";
 const PLAYGROUND_CARD_BORDER_RADIUS = "3rem";
 
 export const PlaygroundContainer = styled.section`
-  margin-bottom: ${({theme}) => theme.sectionSpacerHeight};
+  margin-bottom: ${({ theme }) => theme.sectionSpacerHeight};
 `;
 
 export const PlaygroundGrid = styled.div`
@@ -45,7 +45,7 @@ export const PlaygroundCard = styled.article<{ imageSrc: string }>`
   background-size: cover;
   background-position: center;
 
-  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
+  box-shadow: ${({ theme }) => theme.boxShadow};
   color: white;
 `;
 

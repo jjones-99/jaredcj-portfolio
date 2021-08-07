@@ -14,6 +14,7 @@ import {
   WorkCardHeader,
   WorkCardTitle,
   WorkDetailsCard,
+  WorkCardLink,
 } from "./WorkStyles";
 
 export interface WorkCardProps {
@@ -45,16 +46,24 @@ const WorkCard: React.FC<WorkCardProps> = ({ item }) => {
     </WorkDetailsCard>
   );
 
+  const buttonOption = item.buttonLink ? (
+    <WorkCardLink href={item.buttonLink} target="_blank" rel="no-referrer">
+      Visit Website
+    </WorkCardLink>
+  ) : (
+    <WorkCardButton onClick={() => setShowModal(true)}>Read More</WorkCardButton>
+  );
+
   return (
     <>
       <WorkCardContainer imageSrc={item.thumbnailSrc}>
-        <WorkCardCorner>{item.time}</WorkCardCorner>
-        <WorkCardContent alignX="flex-end" alignY="flex-end">
-          <WorkCardHeader>
+        <WorkCardContent>
+          {/* <WorkCardHeader>
+            {item.time}
             <WorkCardTitle>{item.title}</WorkCardTitle>
-          </WorkCardHeader>
+          </WorkCardHeader> */}
           <WorkCardBody>{item.hook}</WorkCardBody>
-          <WorkCardButton onClick={() => setShowModal(true)}>Read More</WorkCardButton>
+          {buttonOption}
         </WorkCardContent>
       </WorkCardContainer>
       {showModal && moreDetails}
