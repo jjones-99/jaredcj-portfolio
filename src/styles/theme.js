@@ -1,14 +1,15 @@
 // Reused constants.
-const COLOR_HUE = "4";
-const COLOR_PRIMARY = `hsl(${COLOR_HUE}, 69%, 61%)`;
 const FONT_FAMILY_PRIMARY = '"Spartan", sans-serif';
 const FONT_FAMILY_SECONDARY = '"Roboto Slab", serif';
+const COLOR_PRIMARY_LIGHT = `hsl(261, 92%, 70%)`;
+const COLOR_PRIMARY = "hsl(261, 49%, 55%)";
+const COLOR_PRIMARY_DARK = "hsl(261, 40%, 41%)";
 
 // The bars that stretch the screen and animate with the mouse.
 export const BARS = [
-  { color: `hsl(${COLOR_HUE}, 54%, 93%)`, size: "18rem" },
-  { color: `hsl(${COLOR_HUE}, 54%, 82%)`, size: "14rem" },
-  { color: `hsl(${COLOR_HUE}, 54%, 71%)`, size: "8rem" },
+  { color: COLOR_PRIMARY_LIGHT, size: "18rem" },
+  { color: COLOR_PRIMARY, size: "14rem" },
+  { color: COLOR_PRIMARY_DARK, size: "8rem" },
 ];
 
 // The theme to use with styled components.
@@ -16,8 +17,8 @@ export const theme = {
   // ========== Colors ==========
 
   colorPrimary: COLOR_PRIMARY,
-  colorPrimaryLight: `hsl(${COLOR_HUE}, 70%, 70%)`,
-  colorPrimaryDark: `hsl(${COLOR_HUE}, 92%, 8%)`,
+  colorPrimaryLight: COLOR_PRIMARY_LIGHT,
+  colorPrimaryDark: COLOR_PRIMARY_DARK,
 
   colorTitle: "hsl(0, 0%, 0%)",
   colorSubtitle: "hsl(0, 0%, 50%)",
@@ -27,9 +28,6 @@ export const theme = {
 
   colorBackgroundDark: "hsl(0, 0%, 17%)",
   colorBackgroundLight: "hsl(0, 0%, 87%)",
-
-  colorMenuBackground: `hsl(${COLOR_HUE}, 54%, 71%)`,
-  colorCardBackground: `hsl(${COLOR_HUE}, 34%, 50%)`,
 
   // ========= Fonts =========
 

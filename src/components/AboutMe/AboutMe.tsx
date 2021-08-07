@@ -1,4 +1,6 @@
 import React from "react";
+import { PrimaryButtonLink } from "../../styles/AppStyles";
+import { URL_RESUME } from "../../utils/constants";
 import {
   AboutMeBody,
   AboutMeContainer,
@@ -24,6 +26,10 @@ const AboutMe = () => {
           <p>
             I'm always looking to learn more about what I don't know and improve upon what I do.
           </p>
+          <br />
+          <PrimaryButtonLink light={true} href={URL_RESUME} target="_blank">
+            View my resume
+          </PrimaryButtonLink>
         </AboutMeBody>
         <AboutMeSections>
           <AboutMeSection>

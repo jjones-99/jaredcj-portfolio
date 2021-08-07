@@ -66,7 +66,7 @@ export const PrimaryButtonLink = styled.a<{ light?: boolean }>`
   text-decoration: none;
   color: ${({ light, theme }) => (light ? theme.colorPrimary : "white")};
 
-  padding: 0.2em 2em;
+  padding: 0.7em 2em;
   border-radius: 100000px;
   border: none;
   background-color: ${({ light, theme }) => (light ? "white" : theme.colorPrimary)};
