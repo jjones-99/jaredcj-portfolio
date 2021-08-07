@@ -13,6 +13,7 @@ import Work from "./components/Work/Work";
 import { BARS, theme } from "./styles/theme";
 import ParticleBackground from "./components/Particles/ParticleBackground";
 import AboutMe from "./components/AboutMe/AboutMe";
+import ContactForm from "./components/ContactForm/ContactForm";
 
 function App() {
   const [preloader, setPreloader] = useState(false);
@@ -25,6 +26,7 @@ function App() {
       {!preloader && (
         <ThemeProvider theme={theme}>
           <ScreenOverlay id="mainOverlay" />
+          <ContactForm />
           <ParticleBackground />
           <Header />
           <Hero />
