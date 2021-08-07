@@ -15,18 +15,29 @@ import ParticleBackground from "./components/Particles/ParticleBackground";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Contact from "./components/Contact/Contact";
 
+export interface IAppContext {
+  setRenderContactForm?: (renderContactForm: boolean) => void;
+}
+
+export const AppContext = React.createContext<IAppContext>({});
+
 function App() {
   const [preloader, setPreloader] = useState(false);
+  const [renderContactForm, setRenderContactForm] = useState(false);
+
+  const defaultContext = {
+    setRenderContactForm,
+  };
 
   return (
-    <>
+    <AppContext.Provider value={defaultContext}>
       <Cursor />
 
       {preloader && <Preloader clearPreloader={() => setPreloader(false)} />}
       {!preloader && (
         <ThemeProvider theme={theme}>
           <ScreenOverlay id="mainOverlay" />
-          <Contact />
+          <Contact renderContactForm={renderContactForm} />
           <ParticleBackground />
           <Header />
           <Hero />
@@ -36,7 +47,7 @@ function App() {
           <Footer />
         </ThemeProvider>
       )}
-    </>
+    </AppContext.Provider>
   );
 }
 

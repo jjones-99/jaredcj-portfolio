@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { AppContext } from "../../App";
 import { setOverlayOpacity, toggleBodyScrolling } from "../../utils/helpers";
 import {
   ContactForm,
@@ -15,8 +16,12 @@ import {
   ContactFormTextarea,
 } from "./ContactStyles";
 
-const Contact = () => {
-  const [renderContactForm, setRenderContactForm] = useState(true);
+export interface ContactFormProps {
+  renderContactForm: boolean;
+}
+
+const Contact: React.FC<ContactFormProps> = ({ renderContactForm }) => {
+  const { setRenderContactForm } = React.useContext(AppContext);
 
   // Disable scrolling when the contact form is visible.
   useEffect(() => {
@@ -31,7 +36,7 @@ const Contact = () => {
           <ContactForm>
             <ContactFormHeader>
               <h1>I'd love to hear from you.</h1>
-              <ContactFormCloseButton type="button" onClick={() => setRenderContactForm(false)}>
+              <ContactFormCloseButton type="button" onClick={() => setRenderContactForm!(false)}>
                 <i className="fa fa-close" />
               </ContactFormCloseButton>
             </ContactFormHeader>

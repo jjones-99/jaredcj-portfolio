@@ -12,11 +12,13 @@ import cancel from "../../assets/cancel.svg";
 import hamburger from "../../assets/hamburger.svg";
 import { URL_LINKEDIN, URL_GITHUB, URL_CODEPEN } from "../../utils/constants";
 import { toggleBodyScrolling } from "../../utils/helpers";
+import { AppContext } from "../../App";
 
 /**
  * Represents site navigation for the portfolio.
  */
 const ThinNavbar: React.FC = () => {
+  const { setRenderContactForm } = React.useContext(AppContext);
   const [renderMenu, setRenderMenu] = useState(false);
 
   useEffect(() => {
@@ -45,7 +47,12 @@ const ThinNavbar: React.FC = () => {
             <ThinNavbarItem onClick={() => setRenderMenu(false)} href="#playground">
               Playground
             </ThinNavbarItem>
-            <ThinNavbarItem onClick={() => setRenderMenu(false)} href="#contact">
+            <ThinNavbarItem
+              onClick={() => {
+                setRenderMenu(false);
+                setRenderContactForm!(true);
+              }}
+            >
               Contact
             </ThinNavbarItem>
           </ThinNavbarNav>

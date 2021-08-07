@@ -60,6 +60,7 @@ export const ContactFormFieldset = styled.fieldset`
 
 export const ContactFormRow = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 `;
 
