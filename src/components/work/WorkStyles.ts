@@ -15,22 +15,20 @@ export const WorkCardGrid = styled.div`
 
   @media only screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 2%;
+    padding: 0 5%;
   }
 
   @media only screen and (min-width: 1024px) {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0 10%;
   }
 
   @media only screen and (min-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr);
+    padding: 0 20%;
   }
 `;
 
 export const WorkCardContainer = styled.article<{ imageSrc: string }>`
   position: relative;
-  margin: 0 2rem 2rem 2rem;
+  margin: 0 1.5rem 1.5rem 1.5rem;
   aspect-ratio: 4 / 3;
   border-radius: 0.5rem;
 
@@ -101,12 +99,7 @@ export const WorkCardContent = styled.div`
   justify-content: center;
   padding: 4em 4em;
 
-  // Text
   color: white;
-
-  @media only screen and (min-width: 768px) {
-    padding: 2rem 1rem;
-  }
 `;
 
 export const WorkCardHeader = styled.header`
