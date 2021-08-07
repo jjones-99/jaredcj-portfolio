@@ -1,5 +1,5 @@
-import SVThumbnail from "../../assets/work/SVThumbnailpng.png";
-import DGThumbnail from "../../assets/work/DennisGroupThumbnail.jpg";
+import SVThumbnail from "../../assets/work/SVLogo.png";
+import DGThumbnail from "../../assets/work/DGLogo.png";
 
 export interface WorkItem {
   title: string;
