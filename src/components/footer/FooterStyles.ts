@@ -34,7 +34,7 @@ export const FooterSocials = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1em;
   text-align: center;
 `;
 
@@ -53,7 +53,7 @@ export const FooterSocial = styled.li`
   }
 `;
 
-export const FooterSocialLink = styled.a`
+export const FooterLink = styled.a`
   font: ${({ theme }) => theme.fontSubtitle};
   font-weight: 600;
   text-decoration: none;
@@ -69,6 +69,7 @@ export const FooterSocialLink = styled.a`
 export const FooterCopy = styled.div`
   font: ${({ theme }) => theme.fontAside};
   font-size: 0.8rem;
+  margin-bottom: 1em;
 `;
 
 export const FooterCredits = styled.ul`
