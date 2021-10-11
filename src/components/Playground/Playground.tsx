@@ -1,7 +1,7 @@
 import React from "react";
 import { PlaygroundContainer, PlaygroundGrid } from "./PlaygroundStyles";
 import PlayCard from "./PlayCard";
-import { PLAY_ITEMS } from "./PlayItems";
+import { PLAY_ITEMS } from "../../models/PlayItems";
 import { SectionHeader, SectionSubtitle, SectionTitle } from "../../styles/AppStyles";
 
 /**

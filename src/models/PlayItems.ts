@@ -2,13 +2,21 @@
  * Defines the information an experiment/playground item should have.
  */
 export interface PlayItem {
+  /** A title for the item. */
   title: string;
+  /** A time or time period for the item. */
   time: string;
+  /** A URL to a thumbnail image. */
   thumbnailSrc: string;
+  /** URLs to more images. */
   gallerySrcs?: string[];
+  /** Some tags describing the item. */
   tags: string[];
+  /** A summary of the item. */
   description: string;
+  /** A URL for a CodePen project for the item. */
   codepenLink?: string;
+  /** A URL for a GitHub repo for the item. */
   githubLink?: string;
 }
 
@@ -19,7 +27,7 @@ export const PLAY_ITEMS: PlayItem[] = [
   {
     title: "Shining Text",
     time: "2021",
-    thumbnailSrc: "/assets/experiments/ProjectCards.gif",
+    thumbnailSrc: "/assets/experiments/ShiningText.gif",
     gallerySrcs: [],
     description: `Learning how to use three.js with textures and shaders.`,
     tags: ["TypeScript", "Vite", "three.js", "shaders"],
@@ -29,7 +37,7 @@ export const PLAY_ITEMS: PlayItem[] = [
   {
     title: "These Cards",
     time: "2021",
-    thumbnailSrc: "/assets/experiments/ShiningText.gif",
+    thumbnailSrc: "/assets/experiments/ProjectCards.gif",
     gallerySrcs: [],
     description: `Designing/developing cards with HTML/CSS to represent experiments on my portfolio site.`,
     tags: ["TypeScript", "React", "three.js"],

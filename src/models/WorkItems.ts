@@ -1,19 +1,38 @@
+/**
+ * Defines the information a work experience item should have.
+ */
 export interface WorkItem {
+  /** A title for the item. */
   title: string;
+  /** The name of the role/position during the item. */
+  role: string;
+  /** A time or time period for the item. */
   time: string;
+  /** A URL to a thumbnail image. */
   thumbnailSrc: string;
+  /** URLs to more images. */
   gallerySrcs: string[];
+  /** Some tags describing the item. */
   tags: string[];
+  /** A short tagline for the item. */
   hook: string;
+  /** A more detailed summary of the item. */
   summary: string;
+  /** A URL for a live demo. e.g. the company's site, CodePen, etc. */
   demoLink?: string;
+  /** A URL for a GitHub repo for the item. */
   githubLink?: string;
+  /** The URL that the "more" button should link to. */
   buttonLink?: string;
 }
 
+/**
+ * Data for the Experience section of the portfolio.
+ */
 export const WORK_ITEMS: WorkItem[] = [
   {
     title: "Dennis Group",
+    role: "Full Stack Developer",
     time: "2020 - Present",
     thumbnailSrc: "/assets/work/SVLogo.png",
     gallerySrcs: [],
@@ -24,6 +43,7 @@ export const WORK_ITEMS: WorkItem[] = [
   },
   {
     title: "Startup Victoria",
+    role: "Digital Content and Community Coordinator",
     time: "2019",
     thumbnailSrc: "/assets/work/DGLogo.png",
     gallerySrcs: [],

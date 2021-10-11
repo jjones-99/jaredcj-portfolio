@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IconButton, PrimaryButton, PrimaryButtonLink } from "../../styles/AppStyles";
 import { setOverlayOpacity, toggleBodyScrolling } from "../../utils/helpers";
-import { WorkItem } from "./WorkItems";
+import { WorkItem } from "../../models/WorkItems";
 import {
   WorkCardBody,
   WorkCardContainer,

@@ -8,7 +8,7 @@ import {
   PlaygroundCardLinks,
   PlaygroundCardTitle,
 } from "./PlaygroundStyles";
-import { PlayItem } from "./PlayItems";
+import { PlayItem } from "../../models/PlayItems";
 
 const hoverMediaQuery = window.matchMedia("(hover: hover)");
 

@@ -6,7 +6,7 @@ import {
   SectionTitle,
 } from "../../styles/AppStyles";
 import WorkCard from "./WorkCard";
-import { WORK_ITEMS } from "./WorkItems";
+import { WORK_ITEMS } from "../../models/WorkItems";
 import { WorkCardGrid, WorkContainer } from "./WorkStyles";
 
 /**
