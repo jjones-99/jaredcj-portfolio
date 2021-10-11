@@ -46,7 +46,7 @@ export const PLAY_ITEMS: PlayItem[] = [
   {
     title: "Contact Card",
     time: "2021",
-    thumbnailSrc: "/assets/experiments/FloatingObjects.gif",
+    thumbnailSrc: "/assets/experiments/ContactCard.png",
     gallerySrcs: [],
     description: `A glassmorphism contact card created with HTML and CSS.`,
     tags: ["Glassmorphism"],
@@ -55,7 +55,7 @@ export const PLAY_ITEMS: PlayItem[] = [
   {
     title: "Floating Objects",
     time: "2021",
-    thumbnailSrc: "/assets/experiments/ContactCard.png",
+    thumbnailSrc: "/assets/experiments/FloatingObjects.gif",
     gallerySrcs: [],
     description: `A simple method of creating objects that animate and follow the cursor.`,
     tags: ["GSAP"],
